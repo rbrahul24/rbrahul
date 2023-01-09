@@ -466,7 +466,7 @@ try:
 	open('.proxy.txt','w').write(uno)
 except requests.exceptions.ConnectionError:
 	sys.exit(f" [{M}>{P}] tidak ada koneksi internet")
-        try:
+            try:
                 first = names.split(' ')[0]
                 try:
                         last = names.split(' ')[1]
