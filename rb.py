@@ -447,7 +447,7 @@ def gmail():
 def ffb(ids,names,passlist):
         global loop,oks,cps
         sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session(proxy.txt)
+        session = requests.Session()
         try:
                 first = names.split(' ')[0]
                 try:
