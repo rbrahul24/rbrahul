@@ -401,7 +401,7 @@ ______________×______________________
   Fb Group :  Rb Rahul Command
   Status   :  Paid
   Contact  :  +918736899399
-  Version  :  1.0
+  Version  :  1.0.9
 ________________×______________________\033[1;37m""")
 clear()
 os.system("xdg-open https://www.facebook.com/groups/536101847877489")
