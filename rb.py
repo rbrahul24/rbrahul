@@ -72,6 +72,24 @@ pcp=[]
 id=[]
 tokenku=[]
 
+###---[ AUTO CREATE UA & PROXY ]---###
+try:
+	clear_layar()
+	print(logo2())
+	print(f'\r\n [{hh}>{P}] sedang dump proxy dan create useragent')
+	try:os.remove('.proxy.txt')
+	except:pass
+	A = ''
+	one = ses.get('https://spys.me/socks.txt').text
+	for x in one.splitlines():
+		if '+' in x:
+			if '.' in x:
+				p = x.split(' ')[0]
+				A += '\n'+p
+	uno = ses.get("https://api.proxyscrape.com/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all").text
+	open('.proxy.txt','w').write(uno)
+except requests.exceptions.ConnectionError:
+	sys.exit(f" [{M}>{P}] tidak ada koneksi internet")
 def login():
         clear()
         cookies = input(' Put cookies: ')
