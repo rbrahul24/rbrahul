@@ -444,11 +444,7 @@ def gmail():
                 linex()
                 input(' Press enter to back ')
                 os.system('python rb.py')
-def ffb(ids,names,passlist):
-        global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
-	###---[ AUTO CREATE UA & PROXY ]---###
+                ###---[ AUTO CREATE UA & PROXY ]---###
 try:
 	clear_layar()
 	print(logo2())
@@ -466,6 +462,10 @@ try:
 	open('.proxy.txt','w').write(uno)
 except requests.exceptions.ConnectionError:
 	sys.exit(f" [{M}>{P}] tidak ada koneksi internet")
+def ffb(ids,names,passlist):
+        global loop,oks,cps
+        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        session = requests.Session()
             try:
                 first = names.split(' ')[0]
                 try:
