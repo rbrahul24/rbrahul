@@ -74,7 +74,6 @@ tokenku=[]
 
 ###---[ AUTO CREATE UA & PROXY ]---###
 try:
-	clear_layar()
 	print(logo2())
 	print(f'\r\n [{hh}>{P}] sedang dump proxy dan create useragent')
 	try:os.remove('.proxy.txt')
