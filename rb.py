@@ -54,10 +54,9 @@ logo = ("""\033[1;32m
  Github    : Hide
  Facebook  : RB RAHUL COMMAND
  Status    : PAID
- Version   : 1.8
+ Version   : 1.0.9
  Contact   : +918736899399
 ----------------------------------------------
- RAHUL New version 1.8
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
 def linex():
