@@ -568,13 +568,7 @@ def ffb7(ids,names,passlist):
         except requests.exceptions.ConnectionError:
                 time.sleep(20)                                    
 try:
-        menu()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:pass
-menu()
-def Subscraption():
+        def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
@@ -608,3 +602,9 @@ def Subscraption():
 		os.system('am start https://wa.me/+918736899399?text=' + tks)
 		
 Subscraption()        
+	menu()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
+menu()
