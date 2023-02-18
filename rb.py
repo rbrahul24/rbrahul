@@ -61,16 +61,23 @@ logo = ("""\033[1;32m
 def linex():
         print('\033[1;37m----------------------------------------------')
 
+# CLEAR
 def clear():
-        os.Subscraption()
-        print(logo)
+	os.system('clear')
+# BACK
+def back():
+	login()
 
-loop=0
-oks=[]
-cps=[]
-pcp=[]
-id=[]
-tokenku=[]
+rahul="RAHUL-"
+imt="-M4786=="
+ak="RAHUL-"
+myid=uuid.uuid4().hex[:10].upper()
+try:
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
+except:
+	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
+	kok.write(myid+imt)
+	kok.close()
 def sids():
     os.system('clear')
     print(logo)
