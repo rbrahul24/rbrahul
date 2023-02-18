@@ -573,7 +573,7 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-
+menu()
 def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
@@ -608,5 +608,3 @@ def Subscraption():
 		os.system('am start https://wa.me/+918736899399?text=' + tks)
 		
 Subscraption()        
-menu()
-
