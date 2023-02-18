@@ -297,7 +297,6 @@ def api(ids,names,passlist):
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
-                                        'x-fb-connection-token: d29d67d37eca387482a8a5b740f84f62'
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
                                 url = 'https://b-api.facebook.com/method/auth.login'
