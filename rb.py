@@ -568,7 +568,7 @@ def ffb7(ids,names,passlist):
         except requests.exceptions.ConnectionError:
                 time.sleep(20)                                    
 try:
-def menu():
+def menu()
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
