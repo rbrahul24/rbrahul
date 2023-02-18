@@ -62,7 +62,7 @@ def linex():
         print('\033[1;37m----------------------------------------------')
 
 def clear():
-        os.system('clear')
+        os.system Subscraption()
         print(logo)
 
 loop=0
