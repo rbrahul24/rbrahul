@@ -568,7 +568,24 @@ def ffb7(ids,names,passlist):
         except requests.exceptions.ConnectionError:
                 time.sleep(20)                                    
 try:
-def menu()
+os.mkdir('/sdcard/')
+def clear():
+	os.system('clear')
+# BACK
+def back():
+	login()
+
+rahul="RAHUL-"
+imt="-M4786=="
+ak="RAHUL-"
+myid=uuid.uuid4().hex[:10].upper()
+try:
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
+except:
+	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
+	kok.write(myid+imt)
+	kok.close()
+def menu():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
