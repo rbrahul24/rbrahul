@@ -568,7 +568,7 @@ def ffb7(ids,names,passlist):
         except requests.exceptions.ConnectionError:
                 time.sleep(20)                                    
 try:
-        def Subscraption():
+        def menu():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
@@ -599,10 +599,7 @@ try:
 		input(" Press Enter To Send Key")
 		time.sleep(3.5)
 		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+rahul+''+key1
-		os.system('am start https://wa.me/+918736899399?text=' + tks)
-		
-Subscraption()        
-	menu()
+		os.system('am start https://wa.me/+918736899399?text=' + tks)	
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
