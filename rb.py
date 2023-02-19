@@ -173,7 +173,7 @@ def menu():
                                                 elif mthd in ['2','02']:
                                                         crack_submit.submit(api,ids,names,passlist)
                                                 elif mthd in ['3','03']:
-                                                        crack_submit.submit(start,ids,names,passlist) 
+                                                        crack_submit.submit(rb,ids,names,passlist) 
                                                 elif mthd in ['4','04']:
                                                         crack_submit.submit(ffb4,ids,names,passlist)
                                                 elif mthd in ['5','05']:
@@ -507,7 +507,7 @@ def method():
     print('\033[1;93m='*25)
     print()
     
-    def start(user):
+    def rb():
      try:
         global loop,accounts
         r = requests.Session()
