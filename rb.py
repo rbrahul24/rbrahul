@@ -143,9 +143,9 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                approval()
                 os.system('clear')
                 print(logo)
+                approval()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
