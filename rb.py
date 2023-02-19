@@ -60,7 +60,8 @@ logo = ("""\033[1;32m
 \033[1;37m----------------------------------------------""")
 def linex():
         print('\033[1;37m----------------------------------------------')
-
+def clear():
+  os.system('clear')
 def approval():
   os.system('clear')
   print(logo)
@@ -88,7 +89,6 @@ def approval():
       tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+9188736899399?text='+tks),approval()
       time.sleep(1)
       approval()
-      os.system('python RAHUL.py')
   except:
     sys.exit()
 
@@ -145,8 +145,7 @@ def remove_dub():
 def menu():
         try:
                 approval()
-                os.system('python RAHUL.py')
-                print (logo)
+                clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
