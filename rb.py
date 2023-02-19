@@ -63,6 +63,7 @@ def linex():
 # CLEAR
 def clear():
 	os.system('clear')
+    print (logo)
 # BACK
 def back():
 	login()
@@ -82,7 +83,7 @@ def login():
 		token = open('.token.txt','r').read()
 		tokenku.append(token)
 		try:
-			sy = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt')
+			sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
 			public_menu()
 		except KeyError:
 			Public()
@@ -145,7 +146,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-		back()
+                Subscraption()
                 clear()
         #       chk()
                 x = ("sex")
@@ -429,7 +430,7 @@ def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt").text
+	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/mr.rahul/main/Server.txt").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
