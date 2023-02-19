@@ -144,7 +144,7 @@ def remove_dub():
 def menu():
         try:
                 approval()
-                os.system('clear')
+                os.system('python RAHUL.py')
                 print (logo)
         #       chk()
                 x = ("sex")
