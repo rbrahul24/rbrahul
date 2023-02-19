@@ -193,7 +193,7 @@ def menu():
                                 input(' Press enter to back ')
                                 os.system('python RAHUL.py')
                         elif xd in ['2','02']:
-                                rb1()
+                                file()
                         elif xd in ['3','03']:
                                 remove_dub()
                         elif xd in ['4','04']:
