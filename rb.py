@@ -1,8 +1,6 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-os.system('xdg-open https://www.facebook.com/groups/536101847877489//')
-os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -213,8 +211,7 @@ def menu():
                 exit()
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\033[1;91m[\033[1;97mRAHUL-M1\033[1;91m]\033[1;97m {}-{} \033[1;91m[\033[1;97m{}\033[1;91m] \033[1;97mOK : \033[1;92m{} \033[1;97mCP : \033[1;91m{}       \r'.format(str(loop), str(len(accounts)), pers , str(len(okacc)) ,str(len(cpacc))))
-        sys.stdout.flush()
+        sys.stdout.write('\r\033[1;91m[\033[1;97mRAHUL-M1\033[1;91m]\033[1;97m {}-{} \033[1;91m[\033[1;97m{}\033[1;91m] \033[1;97mOK : \033[1;92m{} \033[1;97mCP : \033[1;91m{}       \r'.format(str(loop), str(len(accounts)), pers , str(len(okacc)) ,str(len(cpacc)))),sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(' ')[0]
