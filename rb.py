@@ -1,8 +1,6 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-os.system('xdg-open https://www.facebook.com/groups/536101847877489//')
-os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -145,7 +143,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                clear()
+                approval()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -431,5 +429,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
