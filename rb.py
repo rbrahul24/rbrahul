@@ -145,6 +145,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
+		back()
                 clear()
         #       chk()
                 x = ("sex")
@@ -428,7 +429,7 @@ def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/mr.rahul/main/Server.txt").text
+	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
