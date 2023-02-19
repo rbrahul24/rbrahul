@@ -428,9 +428,10 @@ def api1(ids,names,passlist):
                         pass
 try:
         menu()
+        approval()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
 menu()
-approval()
+
