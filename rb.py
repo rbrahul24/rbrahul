@@ -77,40 +77,6 @@ except:
 	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
-def clear():
-        os.system('clear')
-        print(logo)
-def approval():
-  os.system('clear')
-  print(logo)
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
-    if id in httpCaht:
-      print("\33[1;32mYour Token is Successfully Approved")
-      msg = str(os.geteuid())
-      time.sleep(0.5)
-      crack()
-      pass
-    else:
-      print("Your Token : "+id)
-      print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
-      print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
-      print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
-      time.sleep(1)
-      approval()
-  except:
-    sys.exit()
-
-
 loop=0
 oks=[]
 cps=[]
@@ -446,7 +412,7 @@ def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
 	print(logo)
-	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt").text
+	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/mr.rahul/main/Server.txt").text
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
@@ -477,10 +443,10 @@ def Subscraption():
 		
 Subscraption()        
 try:
-     
         menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
 menu()
+
