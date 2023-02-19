@@ -129,6 +129,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
+                Subscraption()
                 clear()
         #       chk()
                 x = ("sex")
@@ -416,7 +417,7 @@ def Subscraption():
 	if key1 in r1:
 		os.system('clear')
 		print(logo)
-		Main()
+		menu()
 	else:
 		os.system("clear")
 		print(logo)
