@@ -62,7 +62,7 @@ def linex():
         print('\033[1;37m----------------------------------------------')
 
 def approval():
-  os.system('clear')
+  os.system('python RAHUL.py')
   print(logo)
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
@@ -144,6 +144,8 @@ def remove_dub():
 def menu():
         try:
                 approval()
+                os.system('clear')
+                print(logo)
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
