@@ -63,7 +63,6 @@ def linex():
 # CLEAR
 def clear():
 	os.system('clear')
-    print (logo)
 # BACK
 def back():
 	login()
