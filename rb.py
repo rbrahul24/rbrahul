@@ -62,7 +62,7 @@ def linex():
         print('\033[1;37m----------------------------------------------')
 
 def approval():
-  os.system('python RAHUL.py')
+  os.system('clear')
   print(logo)
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
@@ -143,9 +143,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                approval()
-                os.system('clear')
-                print(logo)
+                clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
