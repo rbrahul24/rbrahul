@@ -67,7 +67,7 @@ def approval():
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
   try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/SXB-BRAND/Premium/main/Approval.txt').text
+    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
     if id in httpCaht:
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
@@ -85,7 +85,7 @@ def approval():
       print('\33[1;37m----------------------------------------------')
       print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
       input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+9188736899399?text='+tks),approval()
       time.sleep(1)
       approval()
   except:
