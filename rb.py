@@ -63,6 +63,7 @@ def linex():
 # CLEAR
 def clear():
 	os.system('clear')
+    print (logo)
 # BACK
 def back():
 	login()
@@ -77,6 +78,22 @@ except:
 	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
 	kok.write(myid+imt)
 	kok.close()
+def login():
+	try:
+		token = open('.token.txt','r').read()
+		tokenku.append(token)
+		try:
+			sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
+			public_menu()
+		except KeyError:
+			Public()
+		except requests.exceptions.ConnectionError:
+			clear()
+			print(logo)
+			print ( ' [×] Connection Timeout')
+			exit()
+	except IOError:
+		Public()
 loop=0
 oks=[]
 cps=[]
