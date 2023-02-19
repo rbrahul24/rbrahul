@@ -82,7 +82,7 @@ def login():
 		token = open('.token.txt','r').read()
 		tokenku.append(token)
 		try:
-			sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
+			sy = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt')
 			public_menu()
 		except KeyError:
 			Public()
@@ -145,7 +145,6 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                Subscraption()
                 clear()
         #       chk()
                 x = ("sex")
