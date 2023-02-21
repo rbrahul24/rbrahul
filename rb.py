@@ -1,7 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-os.system('xdg-openhttps://m.facebook.com/profile.php?id=100008972086642//')
+os.system('xdg-open https://m.facebook.com/profile.php?id=100008972086642//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
