@@ -61,7 +61,35 @@ logo = ("""\033[1;32m
 \033[1;37m----------------------------------------------""")
 def linex():
         print('\033[1;37m----------------------------------------------')
-
+def approval():
+  os.system('clear')
+  print(logo)
+  uuid = str(os.geteuid()) + str(os.getlogin())
+  id = "-".join(uuid)
+  try:
+    httpCaht = requests.get('https://raw.githubusercontent.com/SXB-BRAND/Premium/main/Approval.txt').text
+    if id in httpCaht:
+      print("\33[1;32mYour Token is Successfully Approved")
+      msg = str(os.geteuid())
+      time.sleep(0.5)
+      crack()
+      pass
+    else:
+      print("Your Token : "+id)
+      print('\33[1;37m----------------------------------------------')
+      print("\33[1;32mImportant Note")
+      print("\33[1;37m----------------------------------------------")
+      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
+      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
+      print('Pay ki ss admin ko sent kara free wala door rahoo')
+      print('\33[1;37m----------------------------------------------')
+      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
+      input('IF U WANT TO BUY THEN PRESS ENTER ')
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
+      time.sleep(1)
+      approval()
+  except:
+    sys.exit()
 def clear():
         os.system('clear')
         print(logo)
@@ -429,31 +457,6 @@ def api1(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-def approval():
-  os.system('clear')
-  print(logo)
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/SXB-BRAND/Premium/main/Approval.txt').text
-    if id in httpCaht:
-      print("\33[1;32mYour Token is Successfully Approved")
-      msg = str(os.geteuid())
-      time.sleep(0.5)
-      crack()
-      pass
-    else:
-      print("Your Token : "+id)
-      print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
-      print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
-      print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
-      time.sleep(1)
-      approval()
 
+
+      approval()
