@@ -150,7 +150,7 @@ def menu():
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
-                        print(' [1] File cloning\n [2] Create File (Dump)\n [3] Remove Dublicate Id\n [4] Seprate Link\n [5] Join Whatsapp Group\n [0] Exit menu')
+                        print(' [1] File cloning\n [2] Random Cloning\n [3] Remove Dublicate Id\n [4] Seprate Link\n [5] Join Whatsapp Group\n [0] Exit menu')
                         linex()
                         xd=input(' Choose an option: ')
                         if xd in ['1','01']:
@@ -211,7 +211,7 @@ def menu():
                                 input(' Press enter to back ')
                                 os.system('python RAHUL.py')
                         elif xd in ['2','02']:
-                                rb1()
+                                rehan()
                         elif xd in ['3','03']:
                                 remove_dub()
                         elif xd in ['4','04']:
@@ -408,7 +408,7 @@ def rehan():
 		time.sleep(2)
 		rehan()
 
-def menu():
+def randm():
 	os.system('clear')
 	print(logo)
 	print('[1] LAST 7 DIGIT')
@@ -434,7 +434,7 @@ def menu():
 	else:
 		print('\n\033[1;37m[•] Choose valid option\033[0;97m')
 		time.sleep(2)
-		menu()
+		randm()
 
 #____
 
