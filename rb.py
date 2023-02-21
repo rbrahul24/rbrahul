@@ -457,6 +457,11 @@ def api1(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
+   try:
+        approval()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
+approval()
 
-
-      approval()
