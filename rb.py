@@ -1,6 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -41,35 +42,6 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
-def approval():
-  os.system('clear')
-  print(logo)
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
-    if id in httpCaht:
-      print("\33[1;32mYour Token is Successfully Approved")
-      msg = str(os.geteuid())
-      time.sleep(0.5)
-      crack()
-      pass
-    else:
-      print("Your Token : "+id)
-      print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
-      print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
-      print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
-      time.sleep(1)
-      approval()
-  except:
-    sys.exit()
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -90,7 +62,6 @@ logo = ("""\033[1;32m
 def linex():
         print('\033[1;37m----------------------------------------------')
 
-        
 def clear():
         os.system('clear')
         print(logo)
@@ -147,7 +118,6 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-
                 clear()
         #       chk()
                 x = ("sex")
@@ -459,11 +429,34 @@ def api1(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-try:
-        menu()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:pass
-approval()
+def approval():
+  os.system('clear')
+  print(logo)
+  uuid = str(os.geteuid()) + str(os.getlogin())
+  id = "-".join(uuid)
+  try:
+    httpCaht = requests.get('https://raw.githubusercontent.com/SXB-BRAND/Premium/main/Approval.txt').text
+    if id in httpCaht:
+      print("\33[1;32mYour Token is Successfully Approved")
+      msg = str(os.geteuid())
+      time.sleep(0.5)
+      crack()
+      pass
+    else:
+      print("Your Token : "+id)
+      print('\33[1;37m----------------------------------------------')
+      print("\33[1;32mImportant Note")
+      print("\33[1;37m----------------------------------------------")
+      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
+      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
+      print('Pay ki ss admin ko sent kara free wala door rahoo')
+      print('\33[1;37m----------------------------------------------')
+      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
+      input('IF U WANT TO BUY THEN PRESS ENTER ')
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923188508994?text='+tks),approval()
+      time.sleep(1)
+      approval()
+  except:
+    sys.exit()
+
 
