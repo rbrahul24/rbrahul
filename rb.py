@@ -535,7 +535,7 @@ def api(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 888932238818907|tHV1fENiy2CiWKo8DZAvpg-mOls'',
+                                        'Authorization':'OAuth 888932238818907|tHV1fENiy2CiWKo8DZAvpg-mOls',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
