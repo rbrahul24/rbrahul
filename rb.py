@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -536,7 +535,7 @@ def api(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 1282901019105773|YVOnw6NVW0291dsWkd6xFjPaVq4',
+                                        'Authorization':'OAuth 1282901019105773|7kCl7leqcD-XrRu2wHd1QQTQCOc',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
