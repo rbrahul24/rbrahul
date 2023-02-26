@@ -69,7 +69,7 @@ def approval():
       time.sleep(1)
       approval()
   except:
-    os.system('python RAHUL.py')     
+    sys.exit()        
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -145,6 +145,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
+                approval()
                 clear()
         #       chk()
                 x = ("sex")
@@ -815,6 +816,11 @@ def api2(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-		
+try:
+        menu()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
 approval()
 
