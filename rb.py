@@ -1,7 +1,6 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-os.system('xdg-open https://www.youtube.com/channel/UCw2BrAeBmBKl54T1pbj4PWw//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -816,11 +815,6 @@ def api2(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-try:
-        approval()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:pass
-menu()
+		
+approval()
 
