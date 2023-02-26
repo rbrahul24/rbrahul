@@ -736,7 +736,6 @@ def api2(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
                                         'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
-                                        'api-key:'882a8490361da98702bf97a021ddc14d',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
