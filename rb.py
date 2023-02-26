@@ -1,7 +1,6 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -735,7 +734,7 @@ def api2(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
-                                        'Authorization':'OAuth 1479723375646806|afb3e4a6d8b868314cc843c21eebc6ae',
+                                        'Authorization':'OAuth 567067343352427|f249176f09e26ce54212b472dbab8fa8',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
