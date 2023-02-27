@@ -74,7 +74,7 @@ def main_apv():
         #nichy number ki hata k apna numbr dal lo 
         os.system("xdg-open https://wa.me/+923118933642")
         #nichy  link hata k apni github ke link lagau
-    r1=requests.get("https://pastebin.com/raw/GUgkVAWC").text
+    r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt").text
     if key1 in r1:
     	#R ke jaga apne main jahan sy script started krna chahty wo lagao 
         menu()
@@ -816,7 +816,7 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        main_apv()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
