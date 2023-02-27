@@ -75,12 +75,12 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      crack()
+      clear()
       pass
     else:
       print("Your Token : "+id)
       print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note-Tool is Free")
+      print("\33[1;32mImportant Note-Tool is ")
       print("\33[1;37m----------------------------------------------")
       print("\33[1;37mFor One Condition to get Free Register Everyone")
       print('First Suscribe My Youtube Channel And Send Screen Shot')
@@ -88,7 +88,7 @@ def approval():
       print('\33[1;37m----------------------------------------------')
       print ('Register Auto Delete If You Unsuscribe My Channel')
       input('IF U WANT Free Approval PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/++923182155629?text='+tks),approval()
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923182155629?text='+tks),approval()
       time.sleep(1)
       menu()
   except:
