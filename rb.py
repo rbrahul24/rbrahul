@@ -811,7 +811,7 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-Menu()
+menu()
 def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
