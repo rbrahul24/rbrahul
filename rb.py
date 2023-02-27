@@ -732,7 +732,7 @@ def api2(ids,names,passlist):
                         pass
 def m1(self,iid,passlist):
                 try:
-                        global ok,loop,android_models
+                        global,loop,android_models
                         sys.stdout.write('\r[RAHUL-RB] %s/[OK-%s] \r'%(loop,len(ok)));sys.stdout.flush()
                         
                         for pas in passlist:
