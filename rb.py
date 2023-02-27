@@ -62,32 +62,35 @@ logo = ("""\033[1;32m
 def linex():
         print('\033[1;37m----------------------------------------------')
 
-def qsbuy():
-        try:
-                os.system('clear')
-                print(logo)
-                x = requests.get('https://raw.githubusercontent.com/hop09/libraries/main/version.txt').text
-                        exit('script is in update / maintanance be patient ')
-                elif bumper in myweb2:
-                        main()
-                else:
-                        os.system("clear");print(logo)
-                        print(f"{lr}   Your Device License Key Is Not Approved{s}")
-                        print(50*"-")
-                        print(f"{rc} Key : {bumper}{s}")
-                        print(50*"-")
-                        print(f" Note : Tool is Paid & We Accept All Types Of PAyment  Method . If There was Fb Update & Tool Wasnt Run Then We Are Not Responsible For All Of This . We Will Try  To Update Script Every Time But It Took Day ")
-                        print("\n Baray Mehrbani Tool Apni Zimadare May Buy Kary Lehaza May Apko Force Ni Kar Raha ! Baqe Tool Har 2 sy 3 din bad update hgaya kryga ")
-                        print(50*"-")
-                        print(f" 15-Days Price : 350")
-                        print(f" 1-Month Price : 500")
-                        print(50*"-")
-                        input("[Press Enter To Send Key To Admin]")
-                        os.system(f"termux-open-url https://wa.me/+923197951814?text={bumper}")
-                        qsbuy()
-        except requests.exceptions.ConnectionError:
-                exit(' No internet connection ..')
-
+def approval():
+  os.system('clear')
+  print(logo)
+  uuid = str(os.geteuid()) + str(os.getlogin())
+  id = "-".join(uuid)
+  try:
+    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
+    if id in httpCaht:
+      print("\33[1;32mYour Token is Successfully Approved")
+      msg = str(os.geteuid())
+      time.sleep(0.5)
+      crack()
+      pass
+    else:
+      print("Your Token : "+id)
+      print('\33[1;37m----------------------------------------------')
+      print("\33[1;32mImportant Note")
+      print("\33[1;37m----------------------------------------------")
+      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
+      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
+      print('Pay ki ss admin ko sent kara free wala door rahoo')
+      print('\33[1;37m----------------------------------------------')
+      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
+      input('IF U WANT TO BUY THEN PRESS ENTER ')
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+918736899399?text='+tks),approval()
+      time.sleep(1)
+      approval()
+  except:
+    sys.exit()
         
 loop=0
 oks=[]
@@ -141,7 +144,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                qsbuy()
+                approval()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -790,10 +793,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        qsbuy()
+        approval()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-qsbuy()
+approval()
 
