@@ -47,7 +47,6 @@ def main_apv():
     ak="WASI"
     print(logo)
     #apni id ke link dal lo 
-    os.system('xdg-open https://www.Facebook.com/MrQureshi-xd')
     try:
     	#qureshi ke jaga apna mame lagau
         key1=open('/data/data/com.termux/files/usr/bin/.qureshi-cov', 'r').read()
@@ -817,7 +816,7 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        main_apv()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
