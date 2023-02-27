@@ -41,6 +41,23 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
+# CLEAR
+def clear():
+	os.system('clear')
+# BACK
+def back():
+	login()
+
+rahul="RAHUL-"
+imt="-M4786=="
+ak="RAHUL-"
+myid=uuid.uuid4().hex[:10].upper()
+try:
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
+except:
+	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
+	kok.write(myid+imt)
+	kok.close()
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
