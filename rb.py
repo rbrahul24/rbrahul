@@ -793,10 +793,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        approval()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
+approval()
 
