@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -821,10 +820,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        menu()
+        main_apv()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-main_apv()
+menu()
 
