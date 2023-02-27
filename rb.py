@@ -149,6 +149,7 @@ def remove_dub():
 def menu():
         try:
                 clear()
+                approval()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
