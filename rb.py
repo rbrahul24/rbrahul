@@ -41,6 +41,29 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
+
+logo = ("""\033[1;32m      
+  ____  _       ____       _           _ 
+ |  _ \| |__   |  _ \ __ _| |__  _   _| |
+ | |_) | '_ \  | |_) / _` | '_ \| | | | |
+ |  _ <| |_) | |  _ < (_| | | | | |_| | |
+ |_| \_\_.__/  |_| \_\__,_|_| |_|\__,_|_|
+                                            \033
+---------------------------------------------- 
+ Author    : RB RAHUL
+ Github    : Hackerrv33
+ Facebook  : RB RAHUL CMD(RB Brand)
+ Status    : Free
+ Tool Type : File Cloning
+ Version   : 6.2.2
+----------------------------------------------
+ Note: Use Fligt Mode ON/OFf When Start CMD 
+\033[1;37m----------------------------------------------""")
+def linex():
+        print('\033[1;37m----------------------------------------------')
+def clear():
+        os.system('clear')
+        print(logo)
 def approval():
   os.system('clear')
   print(logo)
@@ -72,29 +95,6 @@ def approval():
     sys.exit()
 
         
-logo = ("""\033[1;32m      
-  ____  _       ____       _           _ 
- |  _ \| |__   |  _ \ __ _| |__  _   _| |
- | |_) | '_ \  | |_) / _` | '_ \| | | | |
- |  _ <| |_) | |  _ < (_| | | | | |_| | |
- |_| \_\_.__/  |_| \_\__,_|_| |_|\__,_|_|
-                                            \033
----------------------------------------------- 
- Author    : RB RAHUL
- Github    : Hackerrv33
- Facebook  : RB RAHUL CMD(RB Brand)
- Status    : Free
- Tool Type : File Cloning
- Version   : 6.2.2
-----------------------------------------------
- Note: Use Fligt Mode ON/OFf When Start CMD 
-\033[1;37m----------------------------------------------""")
-def linex():
-        print('\033[1;37m----------------------------------------------')
-def clear():
-        os.system('clear')
-        print(logo)
-
 loop=0
 oks=[]
 cps=[]
