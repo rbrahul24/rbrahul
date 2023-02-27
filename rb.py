@@ -10,7 +10,6 @@ except ModuleNotFoundError:
         print('\n Installing missing modules ...')
         os.system('pip install requests futures==2 > /dev/null')
         os.system('python RAHUL.py')
-	os.system (approval)
 except:pass
         
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
@@ -54,7 +53,7 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      Menu()
+      menu()
       pass
     else:
       print("Your Token : "+id)
