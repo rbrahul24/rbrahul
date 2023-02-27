@@ -1,6 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -41,7 +42,6 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
-
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -55,13 +55,15 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 6.2.2
+ Version   : 6.1.1
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
 def linex():
         print('\033[1;37m----------------------------------------------')
-
+def clear():
+        os.system('clear')
+        print(logo)
 def approval():
   os.system('clear')
   print(logo)
@@ -73,7 +75,7 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      clear()
+      crack()
       pass
     else:
       print("Your Token : "+id)
@@ -91,7 +93,9 @@ def approval():
       menu()
   except:
     sys.exit()
+
         
+
 loop=0
 oks=[]
 cps=[]
