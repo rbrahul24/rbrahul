@@ -75,7 +75,7 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      crack()
+      menu()
       pass
     else:
       print("Your Token : "+id)
@@ -90,7 +90,7 @@ def approval():
       input('IF U WANT TO BUY THEN PRESS ENTER ')
       tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+918736899399?text='+tks),approval()
       time.sleep(1)
-      menu()
+      approval()
   except:
     sys.exit()
 
@@ -797,10 +797,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        approval()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
+approval()
 
