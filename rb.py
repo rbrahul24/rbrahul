@@ -45,7 +45,7 @@ def main_apv():
     os.system('clear')
     #Wasi ke jaga apna name likhlo 
     ak="WASI"
-    logo()
+    print(logo)
     #apni id ke link dal lo 
     os.system('xdg-open https://www.Facebook.com/MrQureshi-xd')
     try:
@@ -53,7 +53,7 @@ def main_apv():
         key1=open('/data/data/com.termux/files/usr/bin/.qureshi-cov', 'r').read()
     except IOError:
         os.system("clear")
-        logo()
+        print(logo)
         print ("[*]--------------------------------------------------------------")
         print ("  Your Token Is Not Approved Already")
         print ("[*]--------------------------------------------------------------")
@@ -82,7 +82,7 @@ def main_apv():
     else:
         os.system("clear")
         os.system('xdg-open https://youtube.com/channel/UCOo-omO_OVoU0B1109O0Z8g')
-        logo()
+        print(logo)
         print ("[*]--------------------------------------------------------------")
         print ("  Your Token Is Not Approved Already")
         print ("[*]--------------------------------------------------------------")
@@ -825,5 +825,5 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-main_apv()
+menu()
 
