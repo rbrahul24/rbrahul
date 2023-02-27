@@ -75,27 +75,24 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      clear()
+      crack()
       pass
     else:
       print("Your Token : "+id)
       print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
+      print("\33[1;32mImportant Note-Tool is Free")
       print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
+      print("\33[1;37mFor One Condition to get Free Register Everyone")
+      print('First Suscribe My Youtube Channel And Send Screen Shot')
+      print('Send Your Screen Shot and Get Approval Within 5 min')
       print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+918736899399?text='+tks),approval()
+      print ('Register Auto Delete If You Unsuscribe My Channel')
+      input('IF U WANT Free Approval PRESS ENTER ')
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/++923182155629?text='+tks),approval()
       time.sleep(1)
       menu()
   except:
     sys.exit()
-
-        
-
 loop=0
 oks=[]
 cps=[]
