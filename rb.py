@@ -81,7 +81,6 @@ def main_apv():
         menu()
     else:
         os.system("clear")
-        os.system('xdg-open https://youtube.com/channel/UCOo-omO_OVoU0B1109O0Z8g')
         print(logo)
         print ("[*]--------------------------------------------------------------")
         print ("  Your Token Is Not Approved Already")
@@ -93,9 +92,7 @@ def main_apv():
         print ("[*]--------------------------------------------------------------")
         print ("     Copy Key And Sent Me WP Approvel Your Key ")
         print ("[*]--------------------------------------------------------------")
-        time.sleep(3.5)
-        #Numbr chnge krlyna
-        os.system("xdg-open https://wa.me/+923118933642")        
+        time.sleep(3.5)       
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -825,5 +822,5 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
+main_apv()
 
