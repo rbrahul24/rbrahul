@@ -61,9 +61,7 @@ logo = ("""\033[1;32m
 \033[1;37m----------------------------------------------""")
 def linex():
         print('\033[1;37m----------------------------------------------')
-def clear():
-        os.system('clear')
-        print(logo)
+
 def qsbuy():
         try:
                 os.system('clear')
@@ -797,7 +795,7 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        menu()
+        qsbuy()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
