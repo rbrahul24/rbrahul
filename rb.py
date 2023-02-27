@@ -80,7 +80,7 @@ def approval():
     else:
       print("Your Token : "+id)
       print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note-Tool is ")
+      print("\33[1;32mImportant Note-Tool is Free ")
       print("\33[1;37m----------------------------------------------")
       print("\33[1;37mFor One Condition to get Free Register Everyone")
       print('First Suscribe My Youtube Channel And Send Screen Shot')
