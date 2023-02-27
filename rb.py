@@ -6,11 +6,11 @@ try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
         from concurrent.futures import ThreadPoolExecutor as tred
-	approval()
 except ModuleNotFoundError:
         print('\n Installing missing modules ...')
         os.system('pip install requests futures==2 > /dev/null')
         os.system('python RAHUL.py')
+	os.system approval()
 except:pass
         
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
