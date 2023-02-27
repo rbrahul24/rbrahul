@@ -70,7 +70,7 @@ def approval():
       time.sleep(1)
       approval()
   except:
-    sys.exit()
+    os.system('python RAHUL.py')
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
