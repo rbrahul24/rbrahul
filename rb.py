@@ -168,7 +168,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                main_apv()
+                clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -817,10 +817,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        main_apv()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-main_apv()
+menu()
 
