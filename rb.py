@@ -67,7 +67,6 @@ def qsbuy():
                 os.system('clear')
                 print(logo)
                 x = requests.get('https://raw.githubusercontent.com/hop09/libraries/main/version.txt').text
-                        os.system('clear')
                         exit('script is in update / maintanance be patient ')
                 elif bumper in myweb2:
                         main()
