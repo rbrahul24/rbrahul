@@ -1,6 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -74,7 +75,7 @@ def main_apv():
         #nichy number ki hata k apna numbr dal lo 
         os.system("xdg-open https://wa.me/+923118933642")
         #nichy  link hata k apni github ke link lagau
-    r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt").text
+    r1=requests.get("https://pastebin.com/raw/GUgkVAWC").text
     if key1 in r1:
     	#R ke jaga apne main jahan sy script started krna chahty wo lagao 
         menu()
@@ -167,7 +168,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-		clear()
+                clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -816,10 +817,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-      main_apv()
+        main_apv()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
+main_apv()
 
