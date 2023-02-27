@@ -743,7 +743,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = 'https://b-graph.facebook.com/auth/login'
+                                url = 'https://b-graph.facebook.com/method/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
