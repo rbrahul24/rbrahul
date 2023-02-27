@@ -804,4 +804,9 @@ def api2(ids,names,passlist):
                         pass
 try:
         qsbuy()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
+qsbuy()
 
