@@ -41,23 +41,6 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
-# CLEAR
-def clear():
-	os.system('clear')
-# BACK
-def back():
-	login()
-
-rahul="RAHUL-"
-imt="-M4786=="
-ak="RAHUL-"
-myid=uuid.uuid4().hex[:10].upper()
-try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
-except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'w')
-	kok.write(myid+imt)
-	kok.close()
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -80,35 +63,7 @@ def linex():
 def clear():
         os.system('clear')
         print(logo)
-def approval():
-  os.system('clear')
-  print(logo)
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/yarzain/Z-81/main/Approvel.txt').txt
-    if id in httpCaht:
-      print("\33[1;32mYour Token is Successfully Approved")
-      msg = str(os.geteuid())
-      time.sleep(0.5)
-      menu()
-      pass
-    else:
-      print("Your Token : "+id)
-      print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
-      print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
-      print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923430440081?text='+tks),approval()
-      time.sleep(1)
-      approval()
-  except:
-    sys.exit()
+
 loop=0
 oks=[]
 cps=[]
@@ -161,7 +116,7 @@ def remove_dub():
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
-                approval()
+                clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -787,7 +742,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://api.facebook.com/method/auth/login'
+                                url = 'https://b-graph.facebook.com/method/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
@@ -804,39 +759,16 @@ def api2(ids,names,passlist):
                                                 break
                                 else:
                                         continue
-def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
-	clear()
-	print(logo)
-	r1=requests.get("https://raw.githubusercontent.com/Hackerrv33/mr.rahul/main/Server.txt").text
-	if key1 in r1:
-		os.system('clear')
-		print(logo)
-		Main()
-	else:
-		os.system("clear")
-		print(logo)
-		print("\t \033[1;32m First Get Approvel\033[1;37m ")
-		time.sleep(1)
-		os.system("clear")
-		print(logo)
-		print ("")
-		print(" \033[1;32m RAHUL Tool Paid You Need Get Approved First\033[1;37m\n")
-		print(" \033[1;32m Note : Paid Tools HA JANI LOG \033[1;37m")
-		print ("")
-		print(" Your Key is Not Approved ")
-		print("")
-		print(" Copy And Send Key To Admin")
-		print ("")
-		print (" Your Key : "+ak+rahul+key1)
-		print ("")
-		name = input(" Your Name : ")
-		print ("")
-		input(" Press Enter To Send Key")
-		time.sleep(3.5)
-		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+rahul+''+key1
-		os.system('am start https://wa.me/+918736899399?text=' + tks)
-		
-Subscraption()        
+                        loop+=1
+                except requests.exceptions.ConnectionError:
+                        time.sleep(10)
+                except Exception as e:
+                        pass
+try:
+        menu()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
+menu()
 
-                                     
