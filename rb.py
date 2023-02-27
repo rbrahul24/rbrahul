@@ -805,13 +805,6 @@ def api2(ids,names,passlist):
                                 else:
                                         continue
                         loop+=1
-try:
-        Subscraption()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:pass
-menu()
 def Subscraption():
 	key1=open('/data/data/com.termux/files/usr/bin/.mrrahul-cov', 'r').read()
 	clear()
@@ -847,4 +840,11 @@ def Subscraption():
 		
 Subscraption()        
 
-               
+                                     
+try:
+        Subscraption()
+except requests.exceptions.ConnectionError:
+        print('\n No internet connection ...')
+        exit()
+except Exception as e:pass
+menu()
