@@ -168,6 +168,7 @@ def remove_dub():
 def menu():
         try:
                 main_apv()
+		clear()
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
@@ -821,5 +822,5 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-main_apv()
+menu()
 
