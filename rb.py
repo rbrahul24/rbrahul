@@ -76,7 +76,7 @@ def approval():
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      menu()
+      clear()
       pass
     else:
       print("Your Token : "+id)
@@ -682,10 +682,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        approval()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
+approval()
 
