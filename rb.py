@@ -1,8 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-os.system('xdg-open https://www.youtube.com/@techrahul4794///')
-os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
