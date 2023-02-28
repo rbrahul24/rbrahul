@@ -42,6 +42,7 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
+        
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -70,12 +71,12 @@ def approval():
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
   try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/yarzain/Z-81/main/Approvel.txt').txt
+    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').txt
     if id in httpCaht:
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
       time.sleep(0.5)
-      Menu()
+      menu()
       pass
     else:
       print("Your Token : "+id)
@@ -681,11 +682,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        approval()
+        menu()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-menu()
-
+approval()
 
