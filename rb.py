@@ -288,7 +288,7 @@ def menu():
                         tks = ("Hi MAFIA Sir, I Need To Buy Your Paid MAFIA PRO Tools Version 1.9.0 Premium Please Accept My Key To Premium :)\n\n Name :- "+name+"\n Key :- "+fkeyx)
                         subprocess.check_output(["am", "start", url_wa+(tks)]);time.sleep(2)
                         print(' Run :  python RAHUL.py')
-                        exit()        
+                        menu()        
         except ValueError:
                 exit()
         except requests.exceptions.ConnectionError:
