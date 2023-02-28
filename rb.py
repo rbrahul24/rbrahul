@@ -678,7 +678,7 @@ def api2(ids,names,passlist):
                                 ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/en_US;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
-                                data = {'adid':"eb2ccb51-2a02-48b3-af3f-112cb29bcb52"
+                                data = {'adid':"eb2ccb51-2a02-48b3-af3f-112cb29bcb52",
                                         'email':ids,
                                         'password':pas,
                                         'cpl':'true',
