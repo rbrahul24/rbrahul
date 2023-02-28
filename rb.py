@@ -1,7 +1,8 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-
+os.system('xdg-open https://www.youtube.com/@techrahul4794///')
+os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -42,7 +43,6 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
-        
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -71,7 +71,7 @@ def approval():
   uuid = str(os.geteuid()) + str(os.getlogin())
   id = "-".join(uuid)
   try:
-    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').txt
+    httpCaht = requests.get('https://raw.githubusercontent.com/Hackerrv33/rahulrbc/main/server.txt').text
     if id in httpCaht:
       print("\33[1;32mYour Token is Successfully Approved")
       msg = str(os.geteuid())
@@ -81,15 +81,15 @@ def approval():
     else:
       print("Your Token : "+id)
       print('\33[1;37m----------------------------------------------')
-      print("\33[1;32mImportant Note")
+      print("\33[1;32mImportant Note-Tool is Free ")
       print("\33[1;37m----------------------------------------------")
-      print("\33[1;37mFor 15 Days Approval Price 400  One Month Price")
-      print('600 Easypaisa Ya Kaise Be Acc sy payment kar ka')
-      print('Pay ki ss admin ko sent kara free wala door rahoo')
+      print("\33[1;37mFor One Condition to get Free Register Everyone")
+      print('First Suscribe My Youtube Channel And Send Screen Shot')
+      print('Send Your Screen Shot and Get Approval Within 5 min')
       print('\33[1;37m----------------------------------------------')
-      print ('IF U DONT WANT TO BUY PLS DONT PRESS ENTER')
-      input('IF U WANT TO BUY THEN PRESS ENTER ')
-      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923430440081?text='+tks),approval()
+      print ('Register Auto Delete If You Are Unsuscribe My Channel')
+      input('IF U WANT Free Approval PRESS ENTER ')
+      tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923182155629?text='+tks),approval()
       time.sleep(1)
       menu()
   except:
@@ -268,27 +268,6 @@ def menu():
                                 exit(' Thanks for use 🥰 ')
                         else:
                                 exit(' Option not found in menu...')
-                else:
-                        print("\033[1;31m Your Not Premium User...!\033[1;37m");time.sleep(1)
-                        clear()
-                        print('\033[1;31m First Read Note : ')
-                        print("\033[1;36m We Not Responsible if facebook\n go on update you not get ok idz\n We don't responsible if you delete your \n termux and key need approve\033[1;37m")
-                        linex()
-                        print(' \033[1;31mYour Key Not Registered\033[1;37m')
-                        print(f" \033[1;37mYour Key : {fkeyx}")
-                        linex();print (" Tools.. : Facebook Cloning");print (" Massage : Your Key Not Registered");print (" Status  : \033[1;91mTrail\033[1;37m\n \033[1;31m\033[1;42mNote: If You Are Free User Don't Come IB\033[0;0m");linex();print(' [+] File crack\n [+] Create ids file\n [+] Public crack\n [+] Random number crack\n [+] Random gmail crack\n [+] Exit menu\n\x1b[1;97m [1] Upgrade Tool To (\x1b[1;95mPremium\x1b[1;37m)')
-                        linex()
-                        input(" Choose Option : ")
-                        linex()
-                        print(" Your Subscription Date Expire")
-                        linex()
-                        url_wa = "https://api.whatsapp.com/send?phone=+923150665740&text="
-                        name = input(" Enter your Name : ")
-                        linex()
-                        tks = ("Hi MAFIA Sir, I Need To Buy Your Paid MAFIA PRO Tools Version 1.9.0 Premium Please Accept My Key To Premium :)\n\n Name :- "+name+"\n Key :- "+fkeyx)
-                        subprocess.check_output(["am", "start", url_wa+(tks)]);time.sleep(2)
-                        print(' Run :  python RAHUL.py')
-                        menu()        
         except ValueError:
                 exit()
         except requests.exceptions.ConnectionError:
@@ -682,10 +661,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        menu()
+        approval()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-approval()
+menu()
 
