@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -56,7 +55,7 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 6.3.0
+ Version   : 6.2.2
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
@@ -661,10 +660,10 @@ def api2(ids,names,passlist):
                 except Exception as e:
                         pass
 try:
-        menu()
+        approval()
 except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-approval()
+menu()
 
