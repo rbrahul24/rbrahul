@@ -777,7 +777,7 @@ def api3(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(310260, 4000000)),
                                         'x-fb-connection-type':'mobile.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'[FBAN/FB4A;FBAV/37.0.0.0.109;FBBV/11557663;FBDM/{density=1.5,width=480,height=854};FBLC/en_US;FBCR/Android;FBMF/unknown;FBBD/generic;FBPN/com.facebook.katana;FBDV/google_sdk;FBSV/4.4.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]',
+                                        'user-agent':'Davik/2.1.0 (Linux; U; Android 12; V2031 Build/SP1A.210812.003) [FBAN/MessengerLite;FBAV/306.0.0.8.76;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/756869315;FBCR/Namaste;FBMF/vivo;FBBD/vivo;FBDV/V2031;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]',
                                         'x-fb-net-hni':str(random.randint(310260, 4000000)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
