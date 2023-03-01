@@ -768,7 +768,7 @@ def api3(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        'device_id':adid',
+                                        'device_id':adid,
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authLogin",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
