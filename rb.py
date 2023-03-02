@@ -229,7 +229,7 @@ def menu():
                                                 if mthd in ['1','01']:
                                                         crack_submit.submit(ffb,ids,names,passlist)
                                                 elif mthd in ['2','02']:
-                                                        crack_submit.submit(crackmbasic,ids,passlist)
+                                                        crack_submit.submit(crackmbasic,idf,pwv)
                                                 elif mthd in ['3','03']:
                                                         crack_submit.submit(api3,ids,names,passlist)
                                                 elif mthd in ['4','04']:
@@ -819,7 +819,7 @@ def api3(ids,names,passlist):
                         pass 
 def crackmbasic(idf,pwv):
         global ok,cp,loop
-        sys.stdout.write(f"\r \033[0m[{aajdate}] {loop}/{len(id)} {ok} "),
+        sys.stdout.write(f'\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         sys.stdout.flush()
         for pw in pwv:
                         ag = idf[::-1]
@@ -859,5 +859,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
