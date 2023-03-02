@@ -816,7 +816,7 @@ def api3(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass 
-def crackmbasic(idf,pwv):
+def crackmbasic(ids,names,passlist):
         global ok,cp,loop
         sys.stdout.write(f'\r\r\033[1;37m [RAHUL-RB] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         sys.stdout.flush()
