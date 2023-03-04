@@ -276,7 +276,7 @@ def menu():
                                 else:
                                         menu()
                         elif xd in ['4','04']:
-                                wx=('watch?v=koPEi7HXPtk/')
+                               wx=('watch?v=koPEi7HXPtk/')
                                os.system(f'xdg-open https://www.youtube.com/{wx}');menu()
                         elif xd in ['5','05']:
                                wx=('Js1oU99b67uGRsaKs88RB7')
