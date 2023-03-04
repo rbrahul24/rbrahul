@@ -520,11 +520,11 @@ def api3(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-def mbasic(self, user, _sempak_):
+def mbasic(ids,names,passlist):
 		global ok,cp,loop
 		sys.stdout.write('\r\033[1;97m [AKING] %s/%s  \033[1;92mOK-:%s / \033[1;91mCP-:%s '%(loop,len(self.id),len(ok),len(cp))),
 		sys.stdout.flush()
-		for pw in _sempak_:
+		for pw in names:
 			pw = pw.lower()
 			try: os.mkdir('')
 			except: pass
