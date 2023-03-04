@@ -463,8 +463,6 @@ def api2(ids,names,passlist):
                                         'x-fb-sim-hni':'31061',
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'api_key':'882a8490361da98702bf97a021ddc14d',
-                                        'sig':'62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':'28613',
                                         'x-fb-connection-bandwidth':'29643048',
@@ -543,7 +541,7 @@ def api3(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':'Liger'}
-                                url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
+                                url = 'https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
