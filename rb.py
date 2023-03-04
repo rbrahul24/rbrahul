@@ -176,7 +176,7 @@ def menu():
                                 clear()
                                 print(' All method working try 1 by 1 ')
                                 linex()
-                                print(' [1] Method 1 (FOR FREHS ID ) \n [2] Method 2 (Best for India) \n [3] Method 3 (Use Super Vpn) \n [4] Method 4 (For Old Id) /n [5] Method 5 (For Mix Id)')
+                                print(' [1] Method 1 (FOR FREHS ID ) \n [2] Method 2 (Best for India) \n [3] Method 3 (Use Super Vpn) \n [4] Method 4 (For Old Id) \n [5] Method 5 (For Mix Id)')
                                 linex()
                                 mthd=input(' Choose: ')
                                 linex()
