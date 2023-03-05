@@ -594,12 +594,12 @@ def api5(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(20000, 40000)),
+                                        'x-fb-sim-hni':str(random.randint(2e4, 5e4)),
                                         'x-fb-connection-type':'unknown',
-                                        'Authorization':'OAuth 200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16',
+                                        'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':str(random.randint(20000, 40000)),
-                                        'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
+                                        'x-fb-net-hni':str(random.randint(2e4, 5e4)),
+                                        'x-fb-connection-bandwidth':str(random.randint(4e7, 4e8)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
