@@ -535,7 +535,7 @@ def api5(ids,names,passlist):
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(2e4, 5e4)),
-                                        'x-fb-connection-type':'unknown'
+                                        'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(2e4, 5e4)),
