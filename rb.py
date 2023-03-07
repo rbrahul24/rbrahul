@@ -620,9 +620,8 @@ def api6(ids,names,passlist):
 def methodA(ids,names,passlist):
         try:
             global oks,cps,loop
-            sys.stdout.write(f"\r {S}[PROX] {loop} | OK/CP {len(oks)}/{len(cps)} | {S}{'{:.0%}'.format(loop/float(len(self.id)))}{S}")
-            sys.stdout.flush()
-            fs = name.split(' ')[0]
+            sys.stdout.write('\r\r\033[1;37m [RAHUL-RB N] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+            fn = name.split(' ')[0]
             try:
                 ln = name.split(' ')[1]
             except:
