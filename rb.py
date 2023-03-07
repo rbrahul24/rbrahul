@@ -158,8 +158,10 @@ def menu():
                 ip_address = data['ip']
                 country = data['country']
 
-                print("\33[1;32mIP address:", ip_address)
-                print("Country:", country)        
+                print("\33[1;32mIP address :", ip_address)
+                print("Your Country :", country)   
+
+                
         #       chk()
                 x = ("sex")
                 if x == ("sex"):
