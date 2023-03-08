@@ -496,7 +496,6 @@ def api5(ids,names,passlist):
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
-                                        "api_key": "882a8490361da98702bf97a021ddc14d",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                         
                                 head = {
@@ -509,10 +508,10 @@ def api5(ids,names,passlist):
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
                                         'x-fb-device-group': '5120',
-                                        'X-FB-Friendly-Name': 'ViewerReactionsMutation',
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
+                                        'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
                                         'X-FB-Request-Analytics-Tags': 'graphservice',
                                         'x-fb-http-engine':     'Liger'}
                                 url =   'https://b-graph.facebook.com/auth/login'
