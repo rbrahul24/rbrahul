@@ -418,10 +418,8 @@ def api2(ids,names,passlist):
                                         'source':'login','format':'json',
                                         'generate_session_cookies':'1',
                                         'generate_analytics_claim':'1',
-                                        'generate_machine_id':'join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(24))',
-                                        "advertiser_id": str(uuid.uuid4()),
                                         "locale":"en_US","client_country_code":"US",
-                                        'device':"Infinix X682B",
+                                        'device':"gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
@@ -431,7 +429,6 @@ def api2(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'api_key': '882a8490361da98702bf97a021ddc14d',
                                         'user-agent':'Mozilla/5.0 (Linux; arm_64; Android 10; SM-G960F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 YaApp_Android/23.12.1 YaSearchBrowser/23.12.1 BroPP/1.0 SA/3 Mobile Safari/537.36',
                                         'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
@@ -494,28 +491,25 @@ def api5(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU",
                                         "client_country_code":"CU",
-                                        "app_id": "350685531728",
-                                        "app_ver": "348.719.618.179",
                                         'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "currently_logged_in_userid" : "0",
-                                        "api_key": "882a8490361da98702bf97a021ddc14d",
                                         "fb_api_req_friendly_name": "authenticate",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':'310260',
+                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-type':'mobile.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                                         'user-agent':'Mozilla/5.0 (Linux; U; Android 4.2.2; fr-fr; TECNO H5 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
-                                        'x-fb-net-hni':'310260',
+                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
+                                url = ' https://graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
