@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -495,17 +494,17 @@ def api5(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        'device_id':adid,
+                                        'device_id':'0cd272a7-17dc-4766-958e-5b48799250b',
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
-                                        'x-fb-connection-type':'WIFI.LTE',
+                                        'x-fb-sim-hni':'310260',
+                                        'x-fb-connection-type':'mobile.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':ua_string,
-                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
+                                        'user-agent':'[FBAN/FB4A;FBAV/37.0.0.0.109;FBBV/11557663;FBDM/{density=1.5,width=480,height=854};FBLC/en_US;FBCR/Android;FBMF/unknown;FBBD/generic;FBPN/com.facebook.katana;FBDV/google_sdk;FBSV/4.4.2;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
+                                        'x-fb-net-hni':'310260',
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
