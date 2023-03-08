@@ -504,6 +504,7 @@ def api5(ids,names,passlist):
                                         
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
+                                        'Host': 'graph.facebook.com',
                                         'x-fb-sim-hni':'45201',
                                         'x-fb-connection-type':'MOBILE.LTE',
                                         'X-Tigon-Is-Retry': 'False',
