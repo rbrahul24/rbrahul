@@ -419,7 +419,7 @@ def api2(ids,names,passlist):
                                         'generate_session_cookies':'1',
                                         'generate_analytics_claim':'1',
                                         "locale":"en_US","client_country_code":"US",
-                                        'device':"gtt,
+                                        'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
