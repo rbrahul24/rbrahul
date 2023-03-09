@@ -419,7 +419,7 @@ def api2(ids,names,passlist):
                                         'generate_session_cookies':'1',
                                         'generate_analytics_claim':'1',
                                         "locale":'bn_IN',
-                                        "client_country_code":'IN'
+                                        "client_country_code":'IN',
                                         'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
