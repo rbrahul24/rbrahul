@@ -420,7 +420,7 @@ def api2(ids,names,passlist):
                                         'generate_analytics_claim':'1',
                                         "locale":'bn_IN',
                                         "client_country_code":'IN',
-                                        'device':ua,
+                                        'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
                                         "fb_api_req_friendly_name": "authenticate",
