@@ -1,6 +1,8 @@
 from os import path
 import os,base64,zlib,pip,urllib
 print('\n\033[1;37m install modules...\n It will take some seconds Please Wait...')
+os.system('xdg-open https://www.youtube.com/@techrahul4794///')
+os.system('xdg-open https://chat.whatsapp.com/Js1oU99b67uGRsaKs88RB7//')
 try:
         import os,requests,json,time,re,random,sys,uuid,string,subprocess
         from string import *
@@ -733,11 +735,11 @@ def rndm(ids,passlist):
                         time.sleep(10)
                 except Exception as e:
                         pass                
-def m1(self,iid,name,passlist):
+def m1(ids,names,passlist):
 		try:
 			global ok,loop,android_models
-			sys.stdout.write('\r[QSR] %s / [OK-%s] \r'%(loop,len(ok)));sys.stdout.flush()
-			fn = name.split(' ')[0]
+			sys.stdout.write('\r\r\033[1;37m [RAHUL-RB M5] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			ln = names.split(' ')[1]
 			try:
 				ln = name.split(' ')[1]
 			except:
@@ -785,5 +787,4 @@ except requests.exceptions.ConnectionError:
         exit()
 except Exception as e:pass
 menu()
-
 
